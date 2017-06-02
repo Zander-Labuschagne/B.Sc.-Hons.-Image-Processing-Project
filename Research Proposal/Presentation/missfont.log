@@ -1,0 +1,16 @@
+mktextfm ecss1095
+mktextfm ecss0600
+mktextfm ecss2488
+mktextfm ecsx2488
+mktextfm ecss1200
+mktextfm ecsi1200
+mktextfm ecss1440
+mktextfm ecss0500
+mktextfm nullfont
+mktextfm ecss2074
+mktextfm ecsx2074
+mktextfm ecsx1095
+mktextfm ecss0800
+mktextfm ecsi1095
+mktextfm ecsi0800
+mktextfm ecsi0600

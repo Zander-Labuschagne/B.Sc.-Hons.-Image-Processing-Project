@@ -1,0 +1,241 @@
+\documentclass[11pt]{beamer}
+
+\definecolor{beamer@maroon}{rgb}{0.647,0,0.196}
+\usetheme{Malmoe}
+\setbeamercolor{structure}{fg=beamer@maroon}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage[english]{babel}
+
+\author{Zander Labuschagne 23585137}
+\title{Binarization of Historical Handwritten Documents}
+  
+\begin{document}
+	%Opener
+	\begin{frame}
+		\begin{center}
+			\includegraphics[scale=0.4]{responses.jpg}
+		\end{center}
+	\end{frame}
+	
+	
+	% Titlepage 
+	\begin{frame}
+		\vspace{0.5cm}
+		\begin{center}
+			\setstretch{1.5}
+			\begin{huge}
+				\textbf{Binarization of the Minutes of the Early Synod Meetings of the Reformed Churches in South-Africa}
+			\end{huge}
+		\end{center}
+		\vspace{-0.2cm}
+        \begin{center}
+    			\hspace*{-1.1cm} %\includegraphics[width=\paperwidth,height=5cm]{nwu.jpeg}
+ 			\begin{tikzpicture}
+            		\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\paperwidth,height=5.1cm]{nwu.jpeg}};
+\            	\node[align=center,black,font={\Large}] at (6.4,4.5) {Zander Labuschagne\\Supervisors: Prof. G.R. Drevin \& Mev. S. Campher};
+        		\end{tikzpicture}
+        \end{center}
+	\end{frame}
+
+	% Summary
+	\begin{frame}[t]
+		\begin{columns}[onlytextwidth]
+			\column{0.75\textwidth}
+				\begin{Large}
+					\vspace{-0.2cm}
+					\color{beamer@maroon}Summary
+				\end{Large}
+			\column{0.25\textwidth}
+				\includegraphics[scale=0.4]{nwulogo.jpeg}
+		\end{columns}
+		\hspace{6.5cm}
+		\newline
+		\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}\\
+		[2cm]
+		Research Proposal for Binarization of Historical Handwritten Documents
+	\end{frame}
+	
+	
+	%Outline
+	\begin{frame}[t]
+		\begin{columns}[onlytextwidth]
+			\column{0.75\textwidth}
+				\begin{Large}
+					\vspace{-0.2cm}
+					\color{beamer@maroon}Outline
+				\end{Large}
+			\column{0.25\textwidth}
+				\includegraphics[scale=0.4]{nwulogo.jpeg}
+		\end{columns}
+		\hspace{6.5cm}
+		\newline
+		\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}\\
+		[1cm]
+		\begin{itemize}
+			\item Problem Statement and Substantiation % Probleem Stelling en Motivering
+			\item Research Aim % Navorsingsdoel
+			\item Research Objectives % Navorsingsdoelwitte
+			\item Methods of Investigation % Metodes van Ondersoek
+			\item Review
+		\end{itemize}
+	\end{frame}
+	
+
+	%Problem Statement and Substantiation
+	\begin{frame}[t]
+		\begin{columns}[onlytextwidth]
+			\column{0.75\textwidth}
+				\begin{Large}
+					\vspace{-0.2cm}
+					\hspace{-0.5cm}\color{beamer@maroon}Problem Statement and Substantiation
+				\end{Large}
+			\column{0.25\textwidth}
+				\includegraphics[scale=0.4]{nwulogo.jpeg}
+		\end{columns}
+		\hspace{0.1cm}
+		\newline
+		\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}\\
+		[0.8cm]
+		\begin{itemize}
+			\item Binarization as First Objective in Document Image Processing% Binerisasie as Eerste Doelwit in Dokument Beeldverwerking
+			\item Importance of Binarization % Belangrikheid van Binerisasie
+			\item Existing Research on Historical Handwritten Document Binarization
+			\item Document Binarization vs Historical Document Binarization
+			\item<2-> \textbf{Determine which binarization algorithm is best suited for the binarization of historical handwritten text on degraded paper.}
+		\end{itemize}
+	\end{frame}
+	
+	
+	% Research Aim
+	\begin{frame}[t]
+		\begin{columns}[onlytextwidth]
+			\column{0.75\textwidth}
+				\begin{Large}
+					\vspace{-0.2cm}
+					\color{beamer@maroon}Research Aim
+				\end{Large}
+			\column{0.25\textwidth}
+				\includegraphics[scale=0.4]{nwulogo.jpeg}
+		\end{columns}
+		\hspace{0.1cm}
+		\newline
+		\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}\\
+		[2cm]
+		\textbf{Propose a binarization algorithm best suited for the binarization of historical handwritten documentation.} 
+	\end{frame}
+
+	
+	% Research Objectives	
+	\begin{frame}[t]
+		\begin{columns}[onlytextwidth]
+			\column{0.75\textwidth}
+				\begin{Large}
+					\vspace{-0.2cm}
+					\color{beamer@maroon}Research Objectives
+				\end{Large}
+			\column{0.25\textwidth}
+				\includegraphics[scale=0.4]{nwulogo.jpeg}
+		\end{columns}
+		\hspace{0.1cm}
+		\newline
+		\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}\\
+		[1cm]
+		\begin{columns}[onlytextwidth]
+			\column{0.75\textwidth}
+				\begin{itemize}
+					\item Literature Study:
+					\begin{itemize}
+						\item Thresholding Techniques
+						\item Binarization Algorithms
+						\item Evaluation of Document Image Binarization
+					\end{itemize}
+					\item<2-> Familiarization with MathWorks MATLAB
+				\end{itemize}
+			\column{0.25\textwidth}
+				\vspace{-0.7cm}
+				\uncover<2->{\includegraphics[scale=0.2]{matlabicon.png}}
+		\end{columns}
+		\begin{itemize}
+			\item<3-> Performance Analysis on Thresholding and Binarization
+			\item<4-> Improve Existing Binarization Algorithm(s)\uncover<5->{, \textbf{OR} \\Design New Binarization Algorithm If Opportune}
+			\item<6-> Evaluate and Implement Binarization Algorithm of Choice
+		\end{itemize}
+	\end{frame}
+	
+	
+	%Methods of Investigation	
+	\begin{frame}[t]
+		\begin{columns}[onlytextwidth]
+			\column{0.75\textwidth}
+				\begin{Large}
+					\vspace{-0.2cm}
+					\color{beamer@maroon}Methods of Investigation
+				\end{Large}
+			\column{0.25\textwidth}
+				\includegraphics[scale=0.4]{nwulogo.jpeg}
+		\end{columns}
+		\hspace{0.1cm}
+		\newline
+		\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}\\
+		[1cm]
+		\begin{itemize}
+			\item Research Methodology:
+			\begin{itemize}
+				\item Experimental Computer Science Methodology
+			\end{itemize}
+			\item Algorithm Performance Analysis
+			\item Algorithm Design
+			\item Binarization Result Evaluation
+		\end{itemize}
+	\end{frame}
+	
+	
+	% Review	
+	\begin{frame}[t]
+		\begin{columns}[onlytextwidth]
+			\column{0.75\textwidth}
+				\begin{Large}
+					\vspace{-0.2cm}
+					\color{beamer@maroon}Review
+				\end{Large}
+			\column{0.25\textwidth}
+				\includegraphics[scale=0.4]{nwulogo.jpeg}
+		\end{columns}
+		\hspace{0.1cm}
+		\newline
+		\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}\\
+		[1cm]
+		\begin{itemize}
+			\item Problem Statement and Substantiation
+			\item Research Aim \& Objectives
+			\item Methods of Investigation
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[t]
+		\begin{columns}[onlytextwidth]
+			\column{0.75\textwidth}
+				\begin{Large}
+					\vspace{-0.2cm}
+					\color{beamer@maroon}Questions
+				\end{Large}
+			\column{0.25\textwidth}
+				\includegraphics[scale=0.4]{nwulogo.jpeg}
+		\end{columns}
+		\hspace{0.1cm}
+		\newline
+		\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}\\
+		[1cm]
+		\begin{center}
+				\includegraphics[scale=0.45]{q.jpg}
+		\end{center}
+	\end{frame}
+
+\end{document}
