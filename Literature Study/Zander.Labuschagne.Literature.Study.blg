@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2016/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Zander.Labuschagne.Literature.Study.aux
+The style file: plain.bst
+Database file #1: ref.bib
+Warning--empty journal in jacob2014survey
+Warning--there's a number but no series in ntogas2008binarization
+You've used 17 entries,
+            2118 wiz_defined-function locations,
+            598 strings with 7206 characters,
+and the built_in function-call counts, 6724 in all, are:
+= -- 702
+> -- 264
+< -- 12
++ -- 109
+- -- 86
+* -- 426
+:= -- 1033
+add.period$ -- 61
+call.type$ -- 17
+change.case$ -- 92
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 291
+empty$ -- 551
+format.name$ -- 86
+if$ -- 1496
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 18
+newline$ -- 88
+num.names$ -- 34
+pop$ -- 118
+preamble$ -- 1
+purify$ -- 76
+quote$ -- 0
+skip$ -- 214
+stack$ -- 0
+substring$ -- 445
+swap$ -- 104
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 66
+warning$ -- 2
+while$ -- 68
+width$ -- 19
+write$ -- 197
+(There were 2 warnings)
