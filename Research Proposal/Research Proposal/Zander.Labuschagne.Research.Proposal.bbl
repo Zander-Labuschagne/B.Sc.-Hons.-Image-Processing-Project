@@ -1,0 +1,72 @@
+\begin{thebibliography}{10}
+
+\bibitem{agrawal2011stroke}
+Mudit Agrawal and David Doermann.
+\newblock Stroke-like pattern noise removal in binary document images.
+\newblock In {\em 2011 International Conference on Document Analysis and
+  Recognition (ICDAR)}, pages 17--21. IEEE, 2011.
+
+\bibitem{dodig2002scientific}
+Gordana Dodig-Crnkovic.
+\newblock Scientific methods in computer science.
+\newblock In {\em Proceedings of the Conference for the Promotion of Research
+  in IT at New Universities and at University Colleges in Sweden, Sk{\"o}vde,
+  Suecia}, pages 126--130, 2002.
+
+\bibitem{gatos2006adaptive}
+Basilios Gatos, Ioannis Pratikakis, and Stavros~J Perantonis.
+\newblock Adaptive degraded document image binarization.
+\newblock {\em Pattern recognition}, 39(3):317--327, 2006.
+
+\bibitem{howe2011laplacian}
+Nicholas~R Howe.
+\newblock A laplacian energy for document binarization.
+\newblock In {\em 2011 International Conference on Document Analysis and
+  Recognition (ICDAR)}, pages 6--10. IEEE, 2011.
+
+\bibitem{jacob2014survey}
+Bency Jacob and SB~Waykar.
+\newblock A survey on binarization of historical degraded documents.
+\newblock 2014.
+
+\bibitem{lins2015binarizing}
+Rafael~Dueire Lins, P~Gabriel~de Fran{\c{c}}a, and Marcos~Martins de~Almeida.
+\newblock Binarizing complex scanned documents.
+\newblock In {\em 2015 13th International Conference on Document Analysis and
+  Recognition (ICDAR)}, pages 56--60. IEEE, 2015.
+
+\bibitem{ntogas2008binarization}
+Nikolaos Ntogas and Dimitrios Veintzas.
+\newblock A binarization algorithm for historical manuscripts.
+\newblock In {\em WSEAS International Conference. Proceedings. Mathematics and
+  Computers in Science and Engineering}, number~12. World Scientific and
+  Engineering Academy and Society, 2008.
+
+\bibitem{oates2005researching}
+Briony~J Oates.
+\newblock {\em Researching information systems and computing}.
+\newblock Sage, 2005.
+
+\bibitem{ogier2006madonne}
+Jean-Marc Ogier and Karl Tombre.
+\newblock {\em Madonne: document image analysis techniques for cultural
+  heritage documents}.
+\newblock na, 2006.
+
+\bibitem{o1995document}
+Lawrence O'Gorman and Rangachar Kasturi.
+\newblock {\em Document image analysis}, volume~39.
+\newblock IEEE Computer Society Press Los Alamitos, 1995.
+
+\bibitem{su2011combination}
+Bolan Su, Shijian Lu, and Chew~Lim Tan.
+\newblock Combination of document image binarization techniques.
+\newblock In {\em 2011 International Conference on Document Analysis and
+  Recognition (ICDAR)}, pages 22--26. IEEE, 2011.
+
+\bibitem{tucker2004computer}
+Allen~B Tucker.
+\newblock {\em Computer science handbook}.
+\newblock CRC press, 2004.
+
+\end{thebibliography}

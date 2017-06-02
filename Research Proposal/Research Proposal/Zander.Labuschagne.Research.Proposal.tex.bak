@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+
+%\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[english]{babel}
+\usepackage{tocloft}
+%\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[none]{hyphenat}
+%\usepackage{float}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+%\usepackage{setspace}
+%\usepackage{tikz}
+
+\parindent 0ex
+\linespread{1.5}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\slshape \MakeUppercase{Binarization of the Minutes of the Early Synod Meetings of the Reformed Churches of South-Africa}}
+
+\begin{document}
+    \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+    \tableofcontents
+    \thispagestyle{empty}
+    \clearpage
+    \setcounter{page}{1}
+    
+	\section{Introduction} % 1-2p[0.5p] : Agtergrond : Rationale
+		This project will determine the binarization algorithm(s) or combination of binarization algorithms which best preserves the quality of the text of historical handwritten documents, more specifically the documents containing the minutes of the early synod meetings of the Reformed Churches of South-Africa.\\
+		
+		This project will result in a detailed description of an algorithm which proved to be the best in terms of preserving the quality of historical handwritten document text, as well as the actual algorithm in MATLAB syntax along with the proof supporting the solution's performance whether it be images or statistical data. The algorithm will also be implemented and used to binarize the document images mentioned earlier.
+       
+	\section{Problem Description} % [2.5p] -> Tekort/Probleem -> Navorsingsvraag/Probleemstelling
+    % + Motivation, existing solutions + study contribution
+    % Other tasks to consider later on?????//TODO
+    % LEES Nog Artikes //TODO
+    ``If I had an hour to solve a problem I'd spend 55 minutes thinking about the problem and 5 minutes thinking about solutions.'' - Albert Einstein.\\
+    	
+    	The idea for this project came to mind when the Theological Library of the North-West University saw the need for the digitalization of historical documentation. The library realized that if they don't do anything to prevent further degradation on their archives it will not last forever even in the carefullest hands. The greater picture is to digitalize all the archives in order to keep the history in tact even after the original documentation perishes completely, this will also in turn provide easier access to many more people who are interested in this information as well as providing easier and quicker search methods. However this project will currently focus on the binarization objective only.\\
+    	
+    Binarization in image processing is the process of separating the foreground from the background in an image [1]. Binarization is also considered by many computer scientists as a critical step in the processing of images because it has the greatest impact on the quality grade of all the processing that follows, thus a good binarization result would greatly improve the results of segmentation or any other processing that follows, while a bad binarization result will cause any following processing techniques to yield inadequate results [2].\\
+    
+    Many binarization algorithms exist and they all have their advantages and disadvantages, some fit better for certain circumstances or for a certain type of image. One of the key objectives in binarization is thresholding, which is the calculation algorithm of the middle or “split” value used to separate the foreground from the background in the image [2].\\
+    
+    There are some research going on in historical document processing as seen in the HIP Proceedings, the research contained in the HIP documentation will probably be of good use during this project, but they mostly focus on character recognition or word spotting of foreign characters such as Arabic and Chinese writing. It seems that little focus is placed on the binarization of historical handwritten documents which provides the opportunity to do more research in this field.\\
+    
+    Promising existing solutions are the combination of various binarization algorithms, as presented in the article with the title: ..., written by... It is probable that this approach would be the most successful since it was tested on historical documentation. Other proven binarization algorithms includes Souvola's, Gatos and ... but have only been proven successful in good circumstances.
+    
+	The reason for this research project is that there is not many successful binarization algorithms capable of performing the task this problem requires, most algorithms are adequate in only the perfect circumstances but this project deals with degraded and historically written documentation which is very daunting to read even for human eyes. Other reasons accountable for the lack of success are the order of variations in degraded documentation, there are simply too many variations to generalize all under one class for one algorithm.\\
+    
+    The problem statement is to determine and implement the binarization algorithm which best preserves the quality of the document images, specifically historical handwritten text on degraded paper.
+    
+	\section{Research Aims and Objectives} % 0.5p [1p]
+		The aim of this study is to propose a binarization algorithm suitable to binarize historical handwritten documentation, specifically on the dataset which is the minutes of the early synod meetings of the Reformed Churches in South-Africa.\\
+		
+	The objectives to accomplish in order to achieve the above aim is to:
+	\begin{itemize}
+		\item Perform a literature study on thresholding techniques and binarization algorithms for grey scale images, handwritten documents and historical documentation. It is also necessary to perform a literature study on the evaluation of document image binarization.
+		\item Familiarization with MathWorks MATLAB and/or the MATLAB Image Processing Toolbox which will be used to test and analyse the thresholding techniques and binarization algorithms as well as the design of the binarization algorithm that will be implemented at the end of the study.
+		\item Analysis of the performance of existing thresholding techniques and binarization algorithms on the historical handwritten documents dataset.
+		\item Improve existing binarization algorithm(s) or design a new binarization algorithm if existing binarization algorithms yield inadequate binarization results.
+		\item Evaluate and implement the final binarization algorithm of choice.
+	\end{itemize}
+       
+	\section{Procedures and Methods}
+		This research will follow an hypothetico-deductive methodology as explained by Dodig-Crnkovic, 2009. This methodology is found suitable for this research project because it is a scientific method for the computer science field. This methodology excels in this type of research because it evaluates the solutions through the construction of prototypes, which is algorithms in the case of this research project [3].%Verduidelik die metodologie
+	This research methodology will shape the process this project will undergo and methods chosen when experimenting with solutions.	 Research methods of this study will include the following subsections.
+	
+	\subsection{Algorithm Performance Analysis}
+		Performance analysis of algorithms will be done by experimenting and prototyping of the algorithms and by comparing and evaluating the binarization results. The algorithms will be tested on the minutes of the early synod meetings of the Reformed Churches in South-Africa dataset by using MATLAB.	
+	
+	\subsection{Algorithm Design}
+		Modification of existing algorithms or the design of a new algorithm, if opportune, will also be done on MATLAB as well as the implementation of the final algorithm that will be used to binarize the data in the previous mentioned dataset. 
+	
+	\subsection{Binarization Result Evaluation}
+		The results of the binarization will be evaluated by using the research done on evaluation as well as by comparison and inspection by the study leaders and/or other computer scientists.
+	
+	\section{Approach to Project Management and Project Plan}
+	
+	\section{Development Platform, Resources and Environments}
+		The environment will be strictly scientific because this project is of no interest in an economical environment nor has it economic purposes. The final implementation will only be used once, the results or processed data will be presented to users or community therafter. The research, experience and knowledge gathered will be well documented and shared to become of use to other computer scientists who seeks to achieve similar goals for the sole purpose to broaden the knowlegde of the scientific community in order to ... humanity.\\
+		
+	A personal computer will be used for processing since the processing does not require an industrial level of processing. Processing will be done by MathWorks MATLAB and/or the MATLAB Image Processing Toolbox. 
+	
+	\section{Ethical and Legal Implications}
+       
+    \section{Provisional Chapter Division}
+       
+    \section*{References}
+    \addcontentsline{toc}{section}{{}References}
+    %\addcontentsline{toc}{section}{\protect\numberline{}References}
+    
+    \section*{Appendix A: Research Proposal}
+    \addcontentsline{toc}{section}{{}Appendix A: Research Proposal}
+       
+\end{document}

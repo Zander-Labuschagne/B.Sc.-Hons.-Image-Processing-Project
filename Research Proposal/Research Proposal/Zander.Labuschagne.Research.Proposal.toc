@@ -1,0 +1,32 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}Problem Description}{1}
+\contentsline {subsection}{\numberline {2.1}Background}{1}
+\contentsline {subsection}{\numberline {2.2}Existing Research}{2}
+\contentsline {subsection}{\numberline {2.3}Rationale}{3}
+\contentsline {subsection}{\numberline {2.4}Problem Statement}{3}
+\contentsline {section}{\numberline {3}Research Aims and Objectives}{4}
+\contentsline {section}{\numberline {4}Procedures and Methods}{5}
+\contentsline {subsection}{\numberline {4.1}Research Paradigm}{5}
+\contentsline {subsection}{\numberline {4.2}Algorithm Performance Analysis}{8}
+\contentsline {subsection}{\numberline {4.3}Algorithm Design}{8}
+\contentsline {subsection}{\numberline {4.4}Binarization Result Evaluation}{8}
+\contentsline {subsection}{\numberline {4.5}Artefact}{8}
+\contentsline {section}{\numberline {5}Approach to Project Management and Project Plan}{9}
+\contentsline {subsection}{\numberline {5.1}Scope}{10}
+\contentsline {subsection}{\numberline {5.2}Risks}{10}
+\contentsline {section}{\numberline {6}Development Platform, Resources and Environments}{10}
+\contentsline {section}{\numberline {7}Ethical and Legal Implications}{12}
+\contentsline {section}{\numberline {8}Provisional Chapter Division}{12}
+\contentsline {subsection}{\numberline {8.1}Introduction}{12}
+\contentsline {subsection}{\numberline {8.2}Research Methodology}{12}
+\contentsline {subsection}{\numberline {8.3}Literature Study}{12}
+\contentsline {subsection}{\numberline {8.4}Threshold Calculation}{13}
+\contentsline {subsection}{\numberline {8.5}Evaluation of Binarization Algorithms}{13}
+\contentsline {subsection}{\numberline {8.6}Pre- and Post-Processing Techniques}{13}
+\contentsline {subsection}{\numberline {8.7}Design/Implementation of Binarization Algorithm}{13}
+\contentsline {subsection}{\numberline {8.8}Results}{13}
+\contentsline {subsection}{\numberline {8.9}Conclusion}{13}
+\contentsline {subsection}{\numberline {8.10}Reflection}{13}
+\contentsline {section}{{}References}{15}
+\contentsline {section}{{}Appendix A: Research Proposal}{16}

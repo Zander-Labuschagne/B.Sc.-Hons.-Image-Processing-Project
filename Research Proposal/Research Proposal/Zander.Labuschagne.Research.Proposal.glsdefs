@@ -1,0 +1,30 @@
+\ifglsentryexists{GNOME}{}%
+{%
+\gls@defglossaryentry{GNOME}%
+{%
+name={GNOME},%
+sort={GNOME},%
+type={main},%
+first={GNOME},%
+firstplural={GNOMEs},%
+text={GNOME},%
+plural={GNOMEs},%
+description={GNU Network Object Model Environment},%
+descriptionplural={GNU Network Object Model Environment},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
