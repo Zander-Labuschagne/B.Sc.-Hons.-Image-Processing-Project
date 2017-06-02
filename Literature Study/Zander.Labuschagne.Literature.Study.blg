@@ -5,45 +5,45 @@ The style file: plain.bst
 Database file #1: ref.bib
 Warning--empty journal in jacob2014survey
 Warning--there's a number but no series in ntogas2008binarization
-You've used 17 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            598 strings with 7206 characters,
-and the built_in function-call counts, 6724 in all, are:
-= -- 702
-> -- 264
-< -- 12
-+ -- 109
-- -- 86
-* -- 426
-:= -- 1033
-add.period$ -- 61
-call.type$ -- 17
-change.case$ -- 92
+            628 strings with 8085 characters,
+and the built_in function-call counts, 8509 in all, are:
+= -- 885
+> -- 338
+< -- 14
++ -- 139
+- -- 110
+* -- 554
+:= -- 1319
+add.period$ -- 77
+call.type$ -- 22
+change.case$ -- 118
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 291
-empty$ -- 551
-format.name$ -- 86
-if$ -- 1496
+cite$ -- 24
+duplicate$ -- 359
+empty$ -- 695
+format.name$ -- 110
+if$ -- 1874
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 18
-newline$ -- 88
-num.names$ -- 34
-pop$ -- 118
+int.to.str$ -- 22
+missing$ -- 24
+newline$ -- 113
+num.names$ -- 44
+pop$ -- 145
 preamble$ -- 1
-purify$ -- 76
+purify$ -- 98
 quote$ -- 0
-skip$ -- 214
+skip$ -- 262
 stack$ -- 0
-substring$ -- 445
-swap$ -- 104
-text.length$ -- 12
+substring$ -- 578
+swap$ -- 120
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 66
+type$ -- 84
 warning$ -- 2
-while$ -- 68
-width$ -- 19
-write$ -- 197
+while$ -- 87
+width$ -- 24
+write$ -- 253
 (There were 2 warnings)

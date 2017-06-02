@@ -1,4 +1,4 @@
-PWD /home/zander/Dropbox/NWU Pukke/ITRI 671 - Project-Computer Science and Information Systems/Image Processing Project/Projek/Literature Study
+PWD /home/zander/Dropbox/NWU Pukke/ITRI 671 - Project-Computer Science and Information Systems/B.Sc.-Hons.-Image-Processing-Project/Literature Study
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT Zander.Labuschagne.Literature.Study.tex
@@ -167,13 +167,15 @@ INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT Zander.Labuschagne.Literature.Study.lof
 INPUT Zander.Labuschagne.Literature.Study.lof
 OUTPUT Zander.Labuschagne.Literature.Study.lof
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm
 INPUT nwulogo.jpeg
 INPUT ./nwulogo.jpeg
 INPUT ./nwulogo.jpeg
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT nwulogo.jpeg
+INPUT ./nwulogo.jpeg
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
@@ -202,6 +204,16 @@ INPUT ./nwulogo.jpeg
 INPUT rosenfeld.png
 INPUT ./rosenfeld.png
 INPUT ./rosenfeld.png
+INPUT stroke.JPG
+INPUT ./stroke.JPG
+INPUT ./stroke.JPG
+INPUT stroke2.JPG
+INPUT ./stroke2.JPG
+INPUT ./stroke2.JPG
+INPUT nwulogo.jpeg
+INPUT ./nwulogo.jpeg
+INPUT nwulogo.jpeg
+INPUT ./nwulogo.jpeg
 INPUT nwulogo.jpeg
 INPUT ./nwulogo.jpeg
 INPUT nwulogo.jpeg
@@ -226,6 +238,8 @@ INPUT nwulogo.jpeg
 INPUT ./nwulogo.jpeg
 INPUT Zander.Labuschagne.Literature.Study.bbl
 INPUT Zander.Labuschagne.Literature.Study.bbl
+INPUT nwulogo.jpeg
+INPUT ./nwulogo.jpeg
 INPUT nwulogo.jpeg
 INPUT ./nwulogo.jpeg
 INPUT Zander.Labuschagne.Literature.Study.aux

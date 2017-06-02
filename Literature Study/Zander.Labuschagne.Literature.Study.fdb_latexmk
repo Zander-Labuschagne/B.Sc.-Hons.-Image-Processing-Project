@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Zander.Labuschagne.Literature.Study"] 1496058108 "Zander.Labuschagne.Literature.Study.aux" "Zander.Labuschagne.Literature.Study.bbl" "Zander.Labuschagne.Literature.Study" 1496058219
+["bibtex Zander.Labuschagne.Literature.Study"] 1496424366 "Zander.Labuschagne.Literature.Study.aux" "Zander.Labuschagne.Literature.Study.bbl" "Zander.Labuschagne.Literature.Study" 1496424950
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1492575660 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Zander.Labuschagne.Literature.Study.aux" 1496058218 6217 c3d1ccdde2754d4bc925737c9da63c4d ""
-  "ref.bib" 1496056882 8758 d0ba2f5c772ee73f5d72c6a9b06358cf ""
+  "Zander.Labuschagne.Literature.Study.aux" 1496424366 6910 535007823527c4000fc6c9db3c5b9463 ""
+  "ref.bib" 1496422218 9909 1164640d332d2a7c08b07fb12682c953 ""
   (generated)
   "Zander.Labuschagne.Literature.Study.blg"
   "Zander.Labuschagne.Literature.Study.bbl"
-["pdflatex"] 1496058218 "Zander.Labuschagne.Literature.Study.tex" "Zander.Labuschagne.Literature.Study.pdf" "Zander.Labuschagne.Literature.Study" 1496058219
+["pdflatex"] 1496424366 "Zander.Labuschagne.Literature.Study.tex" "Zander.Labuschagne.Literature.Study.pdf" "Zander.Labuschagne.Literature.Study" 1496424950
   "/home/zander/.texlive/texmf-var/fonts/pk/ljfour/public/amsfonts/symbols/msbm10.657pk" 1495482939 20124 8378cf91cd0df82303b2e0a0a851eb5d ""
   "/home/zander/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk" 1495482943 12764 2020171be664f5769b5aa7027b31f728 ""
   "/home/zander/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk" 1495482941 14156 ba5e55046173d1d76f1099acd7e2f19c ""
@@ -118,18 +118,20 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1492575665 31661 3832dc67fcae1bb0c47594ea86c25797 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1495385173 21233 86a8356fda6de65361ca80c11aac99e1 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1495385168 7587051 12039ce9c07fae89d882930ccd2a216d ""
-  "Cover.pdf" 1495483559 123706 a884833520b864c895e273da79910f89 ""
-  "Zander.Labuschagne.Literature.Study.aux" 1496058218 6217 c3d1ccdde2754d4bc925737c9da63c4d ""
-  "Zander.Labuschagne.Literature.Study.bbl" 1496058108 4376 04c68101a8a670ddaae3c195503a9bab "bibtex Zander.Labuschagne.Literature.Study"
-  "Zander.Labuschagne.Literature.Study.lof" 1496058218 436 a96865cc8eef61096a684719a8df5f54 ""
-  "Zander.Labuschagne.Literature.Study.tex" 1496058217 34433 a9ca95a0f8cb466939694d4dd4d99c34 ""
-  "Zander.Labuschagne.Literature.Study.toc" 1496058218 1991 2174af1b56e0b829d57427b1b2cccbc9 ""
-  "denoise.png" 1496016882 76211 3a522af9a5707b439aa487c99e3b03e6 ""
-  "nwulogo.jpeg" 1489359475 21041 7b41ef64aded01d1581383fe48974722 ""
-  "rosenfeld.png" 1496019628 66370 369dde7eebc99f454a77476ca81bdbff ""
+  "Cover.pdf" 1496413677 123706 a884833520b864c895e273da79910f89 ""
+  "Zander.Labuschagne.Literature.Study.aux" 1496424366 6910 535007823527c4000fc6c9db3c5b9463 ""
+  "Zander.Labuschagne.Literature.Study.bbl" 1496424366 5456 a68e249b5c11f78c9511c8a13d004721 "bibtex Zander.Labuschagne.Literature.Study"
+  "Zander.Labuschagne.Literature.Study.lof" 1496424366 680 fcac1f7709d6eddbee0fc6098a45f555 ""
+  "Zander.Labuschagne.Literature.Study.tex" 1496424948 36595 39d03cf62a6718db349a75d5b30885f2 ""
+  "Zander.Labuschagne.Literature.Study.toc" 1496424366 1993 88f8a4b7385016b929e4d33a14aca3af ""
+  "denoise.png" 1496413677 76211 3a522af9a5707b439aa487c99e3b03e6 ""
+  "nwulogo.jpeg" 1496413677 21041 7b41ef64aded01d1581383fe48974722 ""
+  "rosenfeld.png" 1496413677 66370 369dde7eebc99f454a77476ca81bdbff ""
+  "stroke.JPG" 1496417248 54571 5af0c111897fc7d094a520c1e7ffaa53 ""
+  "stroke2.JPG" 1496417835 177869 e71c1ad4c40d92c0fcee6fbed36eed3c ""
   (generated)
+  "Zander.Labuschagne.Literature.Study.aux"
   "Zander.Labuschagne.Literature.Study.pdf"
   "Zander.Labuschagne.Literature.Study.toc"
-  "Zander.Labuschagne.Literature.Study.aux"
-  "Zander.Labuschagne.Literature.Study.log"
   "Zander.Labuschagne.Literature.Study.lof"
+  "Zander.Labuschagne.Literature.Study.log"

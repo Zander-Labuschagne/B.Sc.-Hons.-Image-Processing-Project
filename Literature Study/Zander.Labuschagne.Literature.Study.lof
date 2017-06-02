@@ -1,3 +1,5 @@
 \select@language {english}
-\contentsline {figure}{\numberline {1}{\ignorespaces Denoising example as explained in \cite {chen2017broken} by Chen \& Wang. (a) Original document image. (b) de-noised image\relax }}{2}
-\contentsline {figure}{\numberline {2}{\ignorespaces Binarization result by using Rosenfeld's method for calculating a threshold value \cite {chen2017broken}. (a) De-noised document image. (b) binarized image\relax }}{5}
+\contentsline {figure}{\numberline {1}{\ignorespaces De-noising example as explained in \cite {chen2017broken} by Chen \& Wang. (a) Original document image. (b) de-noised image\relax }}{3}
+\contentsline {figure}{\numberline {2}{\ignorespaces Binarization result by using Rosenfeld's method for calculating a threshold value \cite {chen2017broken}. (a) De-noised document image. (b) binarized image\relax }}{6}
+\contentsline {figure}{\numberline {3}{\ignorespaces Underlining fountain pen stroke disconnected due to fast movement when writing.\relax }}{7}
+\contentsline {figure}{\numberline {4}{\ignorespaces Letters with broken ink strokes.\relax }}{7}

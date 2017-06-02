@@ -29,6 +29,16 @@ Tom Fawcett.
 \newblock An introduction to {R}{O}{C} analysis.
 \newblock {\em Pattern recognition letters}, 27(8):861--874, 2006.
 
+\bibitem{feng2004contrast}
+Meng-Ling Feng and Yap-Peng Tan.
+\newblock Contrast adaptive binarization of low quality document images.
+\newblock {\em IEICE Electronics Express}, 1(16):501--506, 2004.
+
+\bibitem{gatos2006adaptive}
+Basilios Gatos, Ioannis Pratikakis, and Stavros~J Perantonis.
+\newblock Adaptive degraded document image binarization.
+\newblock {\em Pattern recognition}, 39(3):317--327, 2006.
+
 \bibitem{howe2011laplacian}
 Nicholas~R Howe.
 \newblock A {L}aplacian energy for document binarization.
@@ -58,6 +68,11 @@ Ning Liu and Guangtao Zhai.
 \newblock Free energy adjusted peak signal to noise ratio
   ({F}{E}{A}-{P}{S}{N}{R}) for image quality assessment.
 \newblock {\em Sensing and Imaging}, 18(1):11, 2017.
+
+\bibitem{niblack1985introduction}
+Wayne Niblack.
+\newblock {\em An introduction to digital image processing}.
+\newblock Strandberg Publishing Company, 1985.
 
 \bibitem{ntirogiannis2008objective}
 Konstantinos Ntirogiannis, Basilios Gatos, and Ioannis Pratikakis.
@@ -90,6 +105,12 @@ Yu-Ting Pai, Yi-Fan Chang, and Shanq-Jang Ruan.
   based on intelligent block detection for degraded document images.
 \newblock {\em Pattern Recognition}, 43(9):3177--3187, 2010.
 
+\bibitem{sauvola1997adaptive}
+Jaakko Sauvola, Tapio Seppanen, Sami Haapakoski, and Matti Pietikainen.
+\newblock Adaptive document binarization.
+\newblock In {\em Document Analysis and Recognition, 1997., Proceedings of the
+  Fourth International Conference on}, volume~1, pages 147--152. IEEE, 1997.
+
 \bibitem{soua2015improved}
 Mahmoud Soua, Rostom Kachouri, and Mohamed Akil.
 \newblock Improved hybrid binarization based on {K}means for heterogeneous
@@ -102,5 +123,11 @@ Bolan Su, Shijian Lu, and Chew~Lim Tan.
 \newblock Combination of document image binarization techniques.
 \newblock In {\em 2011 International Conference on Document Analysis and
   Recognition (ICDAR)}, pages 22--26. IEEE, 2011.
+
+\bibitem{wolf2004extraction}
+Christian Wolf and J-M Jolion.
+\newblock Extraction and recognition of artificial text in multimedia
+  documents.
+\newblock {\em Pattern Analysis \& Applications}, 6(4):309--326, 2004.
 
 \end{thebibliography}

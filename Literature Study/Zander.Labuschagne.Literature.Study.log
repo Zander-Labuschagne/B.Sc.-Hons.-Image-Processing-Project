@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.5.21)  29 MAY 2017 11:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.5.21)  2 JUN 2017 17:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -610,18 +610,18 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 (./Zander.Labuschagne.Literature.Study.aux)
 \openout1 = `Zander.Labuschagne.Literature.Study.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -632,14 +632,14 @@ LaTeX Font Info:    ... okay on input line 29.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=469.75502pt
-* \textheight=650.43001pt
+* \textheight=556.47656pt
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
-* \topmargin=-37.0pt
+* \topmargin=-13.87262pt
 * \headheight=30.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -732,35 +732,35 @@ Package caption Info: End \AtBeginDocument code.
 <Cover.pdf, id=1, 597.50829pt x 845.0471pt>
 File: Cover.pdf Graphic file (type pdf)
  <use Cover.pdf>
-Package pdftex.def Info: Cover.pdf used on input line 31.
+Package pdftex.def Info: Cover.pdf used on input line 33.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: Cover.pdf Graphic file (type pdf)
  <use Cover.pdf>
-Package pdftex.def Info: Cover.pdf used on input line 31.
+Package pdftex.def Info: Cover.pdf used on input line 33.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 
 <Cover.pdf, id=4, page=1, 597.50829pt x 845.0471pt>
 File: Cover.pdf Graphic file (type pdf)
  <use Cover.pdf, page 1>
-Package pdftex.def Info: Cover.pdf, page1 used on input line 31.
+Package pdftex.def Info: Cover.pdf, page1 used on input line 33.
 (pdftex.def)             Requested size: 611.73882pt x 796.71696pt.
 File: Cover.pdf Graphic file (type pdf)
 
 <use Cover.pdf, page 1>
-Package pdftex.def Info: Cover.pdf, page1 used on input line 31.
+Package pdftex.def Info: Cover.pdf, page1 used on input line 33.
 (pdftex.def)             Requested size: 596.73184pt x 843.94902pt.
 File: Cover.pdf Graphic file (type pdf)
  <use Cover.pdf, page 1>
-Package pdftex.def Info: Cover.pdf, page1 used on input line 31.
+Package pdftex.def Info: Cover.pdf, page1 used on input line 33.
 (pdftex.def)             Requested size: 596.73184pt x 843.94902pt.
 File: Cover.pdf Graphic file (type pdf)
  <use Cover.pdf, page 1>
-Package pdftex.def Info: Cover.pdf, page1 used on input line 31.
+Package pdftex.def Info: Cover.pdf, page1 used on input line 33.
 (pdftex.def)             Requested size: 596.73184pt x 843.94902pt.
 File: Cover.pdf Graphic file (type pdf)
 
 <use Cover.pdf, page 1>
-Package pdftex.def Info: Cover.pdf, page1 used on input line 31.
+Package pdftex.def Info: Cover.pdf, page1 used on input line 33.
 (pdftex.def)             Requested size: 596.73184pt x 843.94902pt.
  [1
 
@@ -788,11 +788,6 @@ iterature.Study.lof)
 [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
@@ -802,26 +797,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-
-Overfull \hbox (8.82143pt too wide) in paragraph at lines 55--56
-\OT1/cmr/m/n/10.95 The ge-o-met-ric cor-rec-tions that'll be nec-es-sary to pre
--pare the doc-u-ment im-age for ef-fec-tive bi-na-riza-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-
- []
-
 <nwulogo.jpeg, id=143, 233.48769pt x 68.29912pt>
 File: nwulogo.jpeg Graphic file (type jpg)
  <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 56.
+Package pdftex.def Info: nwulogo.jpeg used on input line 55.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -832,15 +811,10 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
 
 [1
 
- <./nwulogo.jpeg>] <denoise.png, id=148, 314.67563pt x 113.67468pt>
-File: denoise.png Graphic file (type png)
-
-<use denoise.png>
-Package pdftex.def Info: denoise.png used on input line 68.
-(pdftex.def)             Requested size: 314.67485pt x 113.6744pt.
+ <./nwulogo.jpeg>]
 File: nwulogo.jpeg Graphic file (type jpg)
  <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 73.
+Package pdftex.def Info: nwulogo.jpeg used on input line 64.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -849,20 +823,19 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./denoise.png (PNG copy)>]
-Overfull \hbox (6.84428pt too wide) in paragraph at lines 75--76
-\OT1/cmr/m/n/10.95 pre-processing fil-ters can re-duce ef-fects such as non-uni
-form dis-tributed in-ten-si-ties(shadows), wrin-kles
- []
+[2] <denoise.png, id=152, 314.67563pt x 113.67468pt>
+File: denoise.png Graphic file (type png)
+ <use denoise.png>
+Package pdftex.def Info: denoise.png used on input line 73.
+(pdftex.def)             Requested size: 314.67485pt x 113.6744pt.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
 File: nwulogo.jpeg Graphic file (type jpg)
 <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 103.
+Package pdftex.def Info: nwulogo.jpeg used on input line 79.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -871,25 +844,26 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
-
- []
-
-
-Overfull \hbox (0.63936pt too wide) in paragraph at lines 110--111
-[]\OT1/cmr/m/n/10.95 Binarization in im-age pro-cess-ing is the pro-cess of dis
--crim-i-nat-ing the fore-ground from the back-ground
- []
+[3 <./denoise.png (PNG copy)>]
+File: nwulogo.jpeg Graphic file (type jpg)
+ <use nwulogo.jpeg>
+Package pdftex.def Info: nwulogo.jpeg used on input line 108.
+(pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+Package Fancyhdr Warning: \headheight is too small (30.0pt): 
+ Make it at least 38.22324pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
 File: nwulogo.jpeg Graphic file (type jpg)
 <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 117.
+Package pdftex.def Info: nwulogo.jpeg used on input line 118.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -898,15 +872,27 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] <rosenfeld.png, id=175, 319.94531pt x 115.18031pt>
+[5] <rosenfeld.png, id=178, 319.94531pt x 115.18031pt>
 File: rosenfeld.png Graphic file (type png)
  <use rosenfeld.png>
-Package pdftex.def Info: rosenfeld.png used on input line 126.
+Package pdftex.def Info: rosenfeld.png used on input line 127.
 (pdftex.def)             Requested size: 319.94452pt x 115.18001pt.
+
+<stroke.JPG, id=179, 626.34pt x 212.795pt>
+File: stroke.JPG Graphic file (type jpg)
+ <use stroke.JPG>
+Package pdftex.def Info: stroke.JPG used on input line 134.
+(pdftex.def)             Requested size: 250.53156pt x 85.11649pt.
+
+<stroke2.JPG, id=180, 196.5744pt x 132.0132pt>
+File: stroke2.JPG Graphic file (type jpg)
+ <use stroke2.JPG>
+Package pdftex.def Info: stroke2.JPG used on input line 141.
+(pdftex.def)             Requested size: 196.57391pt x 132.01286pt.
 File: nwulogo.jpeg Graphic file (type jpg)
 
 <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 140.
+Package pdftex.def Info: nwulogo.jpeg used on input line 147.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -915,10 +901,10 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./rosenfeld.png (PNG copy)>]
+[6 <./rosenfeld.png (PNG copy)>]
 File: nwulogo.jpeg Graphic file (type jpg)
  <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 173.
+Package pdftex.def Info: nwulogo.jpeg used on input line 158.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -927,26 +913,10 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]
+[7 <./stroke.JPG> <./stroke2.JPG>]
 File: nwulogo.jpeg Graphic file (type jpg)
  <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 195.
-(pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (30.0pt): 
- Make it at least 38.22324pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
-
- []
-
-File: nwulogo.jpeg Graphic file (type jpg)
-<use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 213.
+Package pdftex.def Info: nwulogo.jpeg used on input line 188.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -956,28 +926,9 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
-
- []
-
 File: nwulogo.jpeg Graphic file (type jpg)
-<use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 224.
+ <use nwulogo.jpeg>
+Package pdftex.def Info: nwulogo.jpeg used on input line 206.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -987,18 +938,13 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
 File: nwulogo.jpeg Graphic file (type jpg)
 <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 251.
+Package pdftex.def Info: nwulogo.jpeg used on input line 228.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -1008,34 +954,23 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
 
-Overfull \hbox (18.06808pt too wide) in paragraph at lines 258--259
-\OT1/cmr/m/n/10.95 Now that the dou-ment im-age has been bi-na-rized, con-tain-
-ing only black and white pix-els, post-porcessing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
 File: nwulogo.jpeg Graphic file (type jpg)
 <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 265.
+Package pdftex.def Info: nwulogo.jpeg used on input line 239.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -1045,13 +980,18 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
  []
 
 File: nwulogo.jpeg Graphic file (type jpg)
 <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 281.
+Package pdftex.def Info: nwulogo.jpeg used on input line 254.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -1061,9 +1001,13 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [12]
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
+
+ []
+
 File: nwulogo.jpeg Graphic file (type jpg)
- <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 295.
+<use nwulogo.jpeg>
+Package pdftex.def Info: nwulogo.jpeg used on input line 273.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -1075,7 +1019,7 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
 [13]
 File: nwulogo.jpeg Graphic file (type jpg)
  <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 321.
+Package pdftex.def Info: nwulogo.jpeg used on input line 282.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -1087,7 +1031,7 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
 [14]
 File: nwulogo.jpeg Graphic file (type jpg)
  <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 322.
+Package pdftex.def Info: nwulogo.jpeg used on input line 294.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -1096,10 +1040,10 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15] (./Zander.Labuschagne.Literature.Study.bbl
+[15]
 File: nwulogo.jpeg Graphic file (type jpg)
  <use nwulogo.jpeg>
-Package pdftex.def Info: nwulogo.jpeg used on input line 69.
+Package pdftex.def Info: nwulogo.jpeg used on input line 306.
 (pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
 
 
@@ -1108,15 +1052,63 @@ Package Fancyhdr Warning: \headheight is too small (30.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16]) [17] (./Zander.Labuschagne.Literature.Study.aux) ) 
+[16]
+File: nwulogo.jpeg Graphic file (type jpg)
+ <use nwulogo.jpeg>
+Package pdftex.def Info: nwulogo.jpeg used on input line 332.
+(pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (30.0pt): 
+ Make it at least 38.22324pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+File: nwulogo.jpeg Graphic file (type jpg)
+ <use nwulogo.jpeg>
+Package pdftex.def Info: nwulogo.jpeg used on input line 333.
+(pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (30.0pt): 
+ Make it at least 38.22324pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18] (./Zander.Labuschagne.Literature.Study.bbl
+File: nwulogo.jpeg Graphic file (type jpg)
+ <use nwulogo.jpeg>
+Package pdftex.def Info: nwulogo.jpeg used on input line 60.
+(pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (30.0pt): 
+ Make it at least 38.22324pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19]
+File: nwulogo.jpeg Graphic file (type jpg)
+ <use nwulogo.jpeg>
+Package pdftex.def Info: nwulogo.jpeg used on input line 113.
+(pdftex.def)             Requested size: 105.27512pt x 34.1432pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (30.0pt): 
+ Make it at least 38.22324pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20]) [21] (./Zander.Labuschagne.Literature.Study.aux) ) 
 Here is how much of TeX's memory you used:
- 6442 strings out of 493013
- 90304 string characters out of 6139317
- 177801 words of memory out of 5000000
- 9853 multiletter control sequences out of 15000+600000
+ 6460 strings out of 493013
+ 90579 string characters out of 6139317
+ 177855 words of memory out of 5000000
+ 9868 multiletter control sequences out of 15000+600000
  14399 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,18n,49p,1472b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,18n,49p,1408b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
  </usr/share/texmf-dist
 /fonts/pk/ljfour/public/cm/dpi600/cmmi7.pk> </home/zander/.texlive/texmf-var/fo
 nts/pk/ljfour/public/amsfonts/symbols/msbm10.657pk> </home/zander/.texlive/texm
@@ -1144,11 +1136,11 @@ x12.600pk> </home/zander/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsl10.65
 7pk> </home/zander/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk> </
 home/zander/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/z
 ander/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk>
-Output written on Zander.Labuschagne.Literature.Study.pdf (20 pages, 506335 byt
+Output written on Zander.Labuschagne.Literature.Study.pdf (24 pages, 745978 byt
 es).
 PDF statistics:
- 882 PDF objects out of 1000 (max. 8388607)
- 175 compressed objects within 2 object streams
+ 902 PDF objects out of 1000 (max. 8388607)
+ 183 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
