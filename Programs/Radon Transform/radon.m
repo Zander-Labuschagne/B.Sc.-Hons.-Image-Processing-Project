@@ -2,6 +2,7 @@
 pkg load image;
 
 c = imread('PTDC0012.JPG');
+c = rgb2gray(c);
 #cf = fftshift(fft2(c));
 #cr = radon(c);
 
