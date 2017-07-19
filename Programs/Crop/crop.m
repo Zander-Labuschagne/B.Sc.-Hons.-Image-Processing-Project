@@ -2,7 +2,7 @@
 %pkg load image;
 
 image = imread('PTDC0012.JPG');
-image = imresize(image, 0.05);
+image = imresize(image, 0.2);
 image_gray = rgb2gray(image);
 image_bin = ~im2bw(image);
 
@@ -14,35 +14,12 @@ image_bin = imfilter(image_bin, laplacian);
 image_bin = imfilter(image_bin, edge_horizon);
 image_bin = imfilter(image_bin, edge_vertical);
 
-sum = 0;
+%ones_m = ones(5, 5);
+%image_bin = imerode(imdilate(image_bin, ones_m), ones_m);
 
-for i = 1 : size(image, 1)
-  for ii = 1 : size(image, 2)
-    sum = sum + image_bin(i, ii);
-  end;
-  horizontal_sum(i) = sum;
-  horizontal_avg(i) = sum / size(image, 2);
-  sum = 0;
-end;
-
-for iii = 1 : size(image, 2)
-  for iv = 1 : size(image, 1)
-    sum = sum + image_bin(iv, iii);
-  end;
-  vertical_sum(iii) = sum;
-  vertical_avg(iii) = sum / size(image, 1);
-  sum = 0;
-end;
-
-figure('Name', 'Horizontal Sum', 'NumberTitle', 'off');
-plot(horizontal_sum);
-figure('Name', 'Horizontal Average', 'NumberTitle', 'off');
-plot(horizontal_avg);
-figure('Name', 'Grayscale Image', 'NumberTitle', 'off');
-imshow(image_gray);
+%figure('Name', 'Grayscale Image', 'NumberTitle', 'off');
+%imshow(image_gray);
 figure('Name', 'Binary Image', 'NumberTitle', 'off');
 imshow(image_bin);
-figure('Name', 'Vertical Sum', 'NumberTitle', 'off');
-plot(vertical_sum);
-figure('Name', 'Vertical Average', 'NumberTitle', 'off');
-plot(vertical_avg);
+
+draw_lines(image_bin);
