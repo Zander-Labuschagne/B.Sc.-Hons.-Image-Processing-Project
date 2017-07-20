@@ -1,0 +1,7 @@
+Het average van pixels probeer i.p.v sum, -> kleiner wwardes 0 - 1, verkies heeltallige waardes, dus sum eerder. average lyk meeste gevalle dieselfde as die sum se grafiek.
+
+het max probeer om lyne te vind, -> nie altyd die regte lyn.
+
+het van buite af eerste lyn probeer kry bo avg -> party keer vind grens van foto en te ver uit/buite.
+
+het van binne af eerste lyn probeer kry bo avg, -> baie lyne binne bladsy wat deel van inhoud is.
