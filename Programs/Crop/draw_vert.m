@@ -1,16 +1,7 @@
-function draw_lines(image)
+function index = draw_vert(image)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 % 
-%     for i = 1 : size(image, 1)
-%         for ii = 1 : size(image, 2)
-%             sum = sum + image_bin(i, ii);
-%         end;
-%         horizontal_sum(i) = sum;
-%         horizontal_avg(i) = sum / size(image, 2);
-%         sum = 0;
-%     end;
-
     sum = 0;
     for iii = 1 : size(image, 2)
         for iv = 1 : size(image, 1)
@@ -39,9 +30,10 @@ function draw_lines(image)
     for v = 1 : (size(vertical_sum, 2) / 4)
         tempSUM = tempSUM + vertical_sum(v);
         tempAVG = tempSUM / v;
+        vertical_sum(v)
         if (vertical_sum(v) < avg)
             index = v;
-            v = size(vertical_sum(2));
+            break;
         end;
     end;
 
@@ -51,10 +43,5 @@ function draw_lines(image)
     plot(vertical_sum);
     figure('Name', 'Vertical Average', 'NumberTitle', 'off');
     plot(vertical_avg);
-
-    % figure('Name', 'Horizontal Sum', 'NumberTitle', 'off');
-    % plot(horizontal_sum);
-    % figure('Name', 'Horizontal Average', 'NumberTitle', 'off');
-    % plot(horizontal_avg);
 
 end
