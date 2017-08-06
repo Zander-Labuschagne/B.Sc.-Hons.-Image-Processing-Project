@@ -5,3 +5,5 @@ het max probeer om lyne te vind, -> nie altyd die regte lyn.
 het van buite af eerste lyn probeer kry bo avg -> party keer vind grens van foto en te ver uit/buite.
 
 het van binne af eerste lyn probeer kry bo avg, -> baie lyne binne bladsy wat deel van inhoud is.
+
+Tel faktor * avg by die avg, werk sover die beste op vertikaal slegs, maar werk nie orals nie

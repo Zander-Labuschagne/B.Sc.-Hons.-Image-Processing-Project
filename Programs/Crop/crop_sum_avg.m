@@ -7,9 +7,9 @@ clear all;
 
 %% -------------------------Image Preperation------------------------- %%
 
-image = imread('PTDC0029.JPG');
+image = imread('PTDC0012.JPG');
 image_gray = rgb2gray(image);
-image = imresize(image, 0.2);
+image = imresize(image_gray, 0.2);
 image_bin = ~im2bw(image);
 
 fprintf('\nImage Size: %d x %d\n', size(image_gray, 2), size(image_gray, 1));
