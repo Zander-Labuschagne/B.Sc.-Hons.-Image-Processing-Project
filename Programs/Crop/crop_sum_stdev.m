@@ -11,7 +11,7 @@ clear all;
 %44,45-lig
 %109,111-interressant
 %55????
-image = imread('PTDC0083.JPG');
+image = imread('PTDC0044.JPG');
 image_gray = rgb2gray(image);
 image = imresize(image_gray, 0.2);
 image_bin = ~im2bw(image);
@@ -20,8 +20,9 @@ fprintf('\nImage Size: %d x %d\n', size(image_gray, 2), size(image_gray, 1));
 
 %% -----------------------Preprocessing Filters----------------------- %%
 %Laplacian
-laplacian = [0 -1 0; -1 4 -1; 0 -1 0];
-image_bin_laplace = imfilter(image_bin, laplacian);
+%laplacian = [0 -1 0; -1 4 -1; 0 -1 0];
+%image_bin_laplace = imfilter(image_bin, laplacian);
+image_bin_laplace = image_bin;
 %Edge enhancement
 %edge_horizon = [-1 -1 -1; 2 2 2; -1 -1 -1];
 %edge_vertical = [-1 2 -1; -1 2 -1; -1 2 -1];
@@ -38,7 +39,7 @@ imshow(image_bin_laplace);
 
 %% --------------------------Vertical Lines-------------------------- %%
 
-vtolerance = 2.5;
+vtolerance = 2.576;
 
 %Calculate sum of vertical pixel values
 sum = 0;

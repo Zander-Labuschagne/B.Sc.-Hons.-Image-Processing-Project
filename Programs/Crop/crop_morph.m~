@@ -7,7 +7,7 @@ clear all;
 
 %% -------------------------Image Preperation------------------------- %%
 
-image = imread('PTDC0012.JPG');
+image = imread('PTDC0045.JPG');
 image_gray = rgb2gray(image);
 image = imresize(image_gray, 0.2);
 image_bin = ~im2bw(image);
@@ -42,6 +42,7 @@ line_length_tolerance = 0.3;
 density = 0;
 index = 473;
 inc_i = -1;
+lc = 1;
 %for i = 1 : inc_i : size(image_bin, 2)
 for i = round(size(image_bin, 2) * 0.4) : inc_i : 1
     original_i = i;
@@ -60,31 +61,43 @@ for i = round(size(image_bin, 2) * 0.4) : inc_i : 1
                 elseif(image_bin(ii, i + iii))
                     inc_i = iii;
                 end;
+                line(lc) = i;
+                lc = lc + 1;
                 inc_iii = skew_tolerance * 2;
             end;
         end;
         inc_ii = round((1 - line_length_tolerance) .* size(image_bin, 1)) * 2;%Then the line does not continue further
+        lc = 1;
     end;
     %if(density / size(image_bin, 1) > line_length_tolerance)
     if(density / size(image_bin, 1) >= (1 - 2 * line_length_tolerance))
+        lc = 1;
         fprintf('Density Count: %d\n', density);
         fprintf('Density Value: %d\n', density / size(image_bin, 1));
-        index = round(i / 5);
+        index = round(i * 5);
         %Trek Eerste Lyn
         for iv = 1 : size(image_gray, 1)
-            image_gray(iv, index) = 255;
+            if (lc > 0 && lc < size(line))
+                var = round(line(lc) * 5);
+                if var < 1 || var > size(image_gray, 1)
+                    var = index;
+                end;
+            else
+                var = index;
+            end;
+            image_gray(iv, var) = 255;
             for v = 1 : 7
-                image_gray(iv, index + v) = 255;
-                if(index - v > 0)
-                    image_gray(i, index - v) = 255;
+                image_gray(iv, var + v) = 255;
+                if(line(lc) - v > 0)
+                    image_gray(i, var - v) = 255;
                 end;
             end;
+            lc = lc + 1;
         end;
-        
-        
         break;
     end;
     density = 0;
+    inc_i = -1;
     i = original_i;
 end;
 
