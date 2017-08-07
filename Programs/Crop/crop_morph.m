@@ -33,66 +33,17 @@ imshow(image_bin_laplace);
 %figure('Name', 'Grayscale Image', 'NumberTitle', 'off');
 %imshow(image_gray);
 
-skew_tolerance = 20;
-line_length_tolerance = 0.8;
+skew_tolerance = 2;
+line_length_tolerance = 0.2;
+page_border_limit = 0.4;
 
 %% --------------------------Vertical Lines-------------------------- %%
-
-%Connectedness property
-% density = 0;
-% index = 473;
-% inc_i = -1;
-% %for i = 1 : inc_i : size(image_bin, 2)
-% for i = round(size(image_bin, 2) * 0.4) : inc_i : 1
-%     original_i = i;
-%     inc_i = -1;
-%     inc_ii = 1;
-%     for ii = round(0.5 * size(image_bin, 1) - line_length_tolerance / 2 * size(image_bin, 1)) : inc_ii : round(0.5 * size(image) + line_length_tolerance / 2 * size(image_bin, 1))
-%         ii
-%         inc_iii = 1;
-%         for iii = 0 : inc_iii : skew_tolerance
-%             if(i - iii > 0 && i + iii <= size(image_bin, 2) && (image_bin(ii, i - iii) == 1 || image_bin(ii, i + iii) == 1))
-%                 density = density + 1;
-%                 if(ii == 0)
-%                     inc_i = -1;
-%                 elseif(image_bin(ii, i - iii) == 1)
-%                     inc_i = -iii;
-%                 elseif(image_bin(ii, i + iii))
-%                     inc_i = iii;
-%                 end;
-%                 inc_iii = skew_tolerance * 2;
-%             end;
-%         end;
-%         inc_ii = round(0.5 * size(image) + line_length_tolerance / 2 + size(image_bin, 1)) * 2;%Then the line does not continue further
-%     end;
-%     if(density / size(image_bin, 1) >= line_length_tolerance)
-%         fprintf('Start Index: %d\n', round(size(image_bin, 2) * 0.4) * 5);
-%         fprintf('Density Count: %d\n', density);
-%         fprintf('Density Value: %d\n', density / size(image_bin, 1));
-%         index = round(i * 5);
-%         %Trek Eerste Lyn
-%         for iv = 1 : size(image_gray, 1)
-%             image_gray(iv, index) = 255;
-%             for v = 1 : 7
-%                 image_gray(iv, index + v) = 255;
-%                 if(index - v > 0)
-%                     image_gray(i, index - v) = 255;
-%                 end;
-%             end;
-%         end;
-%         break;
-%     end;
-%     density = 0;
-%     i = original_i;
-% end;
-
-
 line_weight = 0;
 skew_detect = 1;
 li = 1;
-line_index = gobjects(size(image_bin, 2));
+line_index = double(size(image_bin, 2));
 
-i = 0.4 * size(image_bin, 2);
+i = round(page_border_limit * size(image_bin, 2));
 while i > 0
      ii = round(0.5 * size(image_bin, 1) - line_length_tolerance * size(image_bin, 1) / 2);
      while ii <= round(0.5 * size(image_bin, 1) + line_length_tolerance * size(image_bin, 1) / 2)
@@ -124,21 +75,23 @@ while i > 0
             end;%Check for skew lines
         end;
         if skew_detect == 0 %If continuing
-            skew_detect = 1
+            skew_detect = 1;
         else%If broken line
             skew_detect = 1;
             line_weight = 0;
+            
             line_index(li) = i;
             li = 1;
             ii = round(0.5 * size(image_bin, 1) + line_length_tolerance * size(image_bin, 1) / 2) * 10;%Jump out of ii while loop
         end;
+        ii = ii + 1;
     end;%Move vertically through image from line_length_tolerance top to bottom
     i = i - 1;
 end;%Move horizontally through image from 40% to the right to left
 
 
-fprintf('Left Index: %d\n', index);
-fprintf('Right Index: %d\n', index);
+fprintf('Total Line Weight: %d\n', line_weight);
+fprintf('Perc Line Weight: %d\n', line_weight / size(image_bin, 1));
 
 
 %% --------------------------Horizontal Lines-------------------------- %%
