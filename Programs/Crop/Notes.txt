@@ -7,3 +7,21 @@ het van buite af eerste lyn probeer kry bo avg -> party keer vind grens van foto
 het van binne af eerste lyn probeer kry bo avg, -> baie lyne binne bladsy wat deel van inhoud is.
 
 Tel faktor * avg by die avg, werk sover die beste op vertikaal slegs, maar werk nie orals nie
+
+Ook verskillende masker voorverwerkings probeer. Net binarized gee skoonste grafiek.
+
+Het Octave ook probeer maar sy binarization is lelik.
+
+Partykeer is die geskryf area som totaal hoer as as rand areas en ander keer andersom
+
+Som-avg en som-stdev werk nie so lekker op skewe lune nie.
+
+Stdev werk baie beter as avg, maar nogsteeds nie orals nie.
+
+Rede hoekom ek van middel af werk is dat dit is waar die inhoud le en wat mens wil hou
+
+het round ingesit by fors om indexe integer te hou
+
+ek dink aan meting van entropy?
+
+kan dalk die areas wat gescan word verbeter
