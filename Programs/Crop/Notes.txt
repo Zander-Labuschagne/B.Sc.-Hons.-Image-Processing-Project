@@ -24,4 +24,4 @@ het round ingesit by fors om indexe integer te hou
 
 ek dink aan meting van entropy?
 
-kan dalk die areas wat gescan word verbeter
+kan dalk die areas wat gescan word verbeter of meer limit.
