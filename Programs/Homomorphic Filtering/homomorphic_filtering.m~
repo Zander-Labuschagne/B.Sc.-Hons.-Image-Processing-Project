@@ -1,0 +1,24 @@
+% Created by Octave 4.2.1, Thu Jul 13 17:19:56 2017 SAST <zander@ArchLinux>
+% pkg load image;
+% !synclient HorizTwoFingerScroll=0
+
+close all;
+clear all;
+
+template = imread('IMG_0164.JPG');
+image = imread('IMG_0206.JPG');
+%image_gray = rgb2gray(image);
+
+template = template ./ 255;
+image_R = image .* template;
+
+figure('Name', 'Original', 'NumberTitle', 'off');
+imshow(image);
+figure('Name', 'R Part', 'NumberTitle', 'off');
+imshow(image);
+     
+
+
+
+
+     
