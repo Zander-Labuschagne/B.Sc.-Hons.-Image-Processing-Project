@@ -6,7 +6,7 @@ close all;
 clear all;
 
 %% -------------------------Image Preperation------------------------- %%
-image = imread('PTDC0111.JPG');
+image = imread('PTDC0120.JPG');
 image = imresize(image, 0.5);
 image_gray = rgb2gray(image);
 
@@ -27,6 +27,9 @@ image_gray = rgb2gray(image);
      %image_rosenfeld = 
      %% -------------------------Otsu------------------------ %%
      image_bin_otsu = imbinarize(image_gray);
+     image_bin_niblack_15 = niblack(image_gray, 15);
+     image_bin_niblack_9 = niblack(image_gray, 9);
+     image_bin_niblack_5 = niblack(image_gray, 5);
 %      image_bin_otsu_wiener = imbinarize(image_filter_wiener);
 %      image_bin_otsu_butt = imbinarize(image_filter_butterworth);
 %      image_bin_otsu_median = imbinarize(image_filter_median);
@@ -48,15 +51,21 @@ image_gray = rgb2gray(image);
 figure('Name', 'Otsu', 'NumberTitle', 'off');
 imagesc(image_bin_otsu);
 colormap('gray');
-figure('Name', 'Wiener -> Otsu', 'NumberTitle', 'off');
-imagesc(image_bin_otsu_wiener);
+figure('Name', 'Niblack 15', 'NumberTitle', 'off');
+imagesc(image_bin_niblack_15);
 colormap('gray');
-figure('Name', 'Butterworth -> Otsu', 'NumberTitle', 'off');
-imagesc(image_bin_otsu_butt);
+figure('Name', 'Niblack 9', 'NumberTitle', 'off');
+imagesc(image_bin_niblack_9);
 colormap('gray');
-figure('Name', 'Median -> Otsu', 'NumberTitle', 'off');
-imagesc(image_bin_otsu_median);
+figure('Name', 'Niblack 5', 'NumberTitle', 'off');
+imagesc(image_bin_niblack_5);
 colormap('gray');
+% figure('Name', 'Butterworth -> Otsu', 'NumberTitle', 'off');
+% imagesc(image_bin_otsu_butt);
+% colormap('gray');
+% figure('Name', 'Median -> Otsu', 'NumberTitle', 'off');
+% imagesc(image_bin_otsu_median);
+% colormap('gray');
 %figure('Name', 'Adaptive', 'NumberTitle', 'off');
 %imshow(image_bin_adapt);
 %imagesc(image_bin_adapt);
