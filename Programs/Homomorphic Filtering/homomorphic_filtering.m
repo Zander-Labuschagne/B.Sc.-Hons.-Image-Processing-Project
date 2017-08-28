@@ -2,7 +2,7 @@
 % pkg load image;
 % !synclient HorizTwoFingerScroll=0
 
-close all;
+%close all;
 clear all;
 
 template = imread('IMG_0164.JPG');
@@ -15,8 +15,12 @@ template = rgb2gray(template);
 for i = 1 : size(image, 1)
     for ii = 1 : size(image, 2)
          a = double(template(i, ii)) / 255;
+         %b = double(template(i, ii, 2)) / 255;
+         %c = double(template(i, ii, 3)) / 255;
           %a = double(template(i, ii)) / 255;
          image_R(i, ii) = (image(i, ii) * a);
+         %image_R(i, ii, 2) = (image(i, ii, 2) * b);
+         %image_R(i, ii, 3) = (image(i, ii, 3) * c);
     end;
 end;
 
@@ -27,7 +31,10 @@ imshow(template);
 figure('Name', 'Original', 'NumberTitle', 'off');
 imshow(image);
 figure('Name', 'R Part', 'NumberTitle', 'off');
-imshow(image_R);
+imagesc(image_R);
+colormap('gray');
+axis('image');
+axis('off');
      
 
 

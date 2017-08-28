@@ -7,7 +7,7 @@ clear all;
 
 %% -------------------------Image Preperation------------------------- %%
 
-image = imread('PTDC0012.JPG');
+image = imread('PTDC0122.JPG');
 image = imresize(image, 0.5);
 image_gray = rgb2gray(image);
 %% ----------------------Wiener Low Pass Filter---------------------- %%
@@ -28,14 +28,14 @@ image_gray = rgb2gray(image);
 %Kan dalk gebruik word in cropping? Omdat ink ligter word
 % 55, 122 goeie voorbeeld
 %image_median = medfilt2(image_gray);
-%imshowpair(image_gray, image_median, 'montage');
+%imshow(image_median);
 
 %% ---------------------Low Pass Butterworth Filter-------------------- %%
 %Nie so goed -> Navors dalk vir beter waardes
 %Stadig
- %image_butterworth = butterworthbpf(image_gray, 30, 120, 1);
- %figure('Name', 'Butterworth', 'NumberTitle', 'off');
- %imshow(image_butterworth);
+ image_butterworth = butterworthbpf(image_gray, 30, 120, 2);
+ figure('Name', 'Butterworth', 'NumberTitle', 'off');
+ imshow(image_butterworth);
 
 %% -----------------------Ideal Low Pass Filter---------------------- %%
 %Los veroorsaak ringing, word vervang deur butterworth
