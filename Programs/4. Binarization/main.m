@@ -13,6 +13,8 @@ image_gray = rgb2gray(image);%onthou om te mention
 
 % %% ---------------------------Pre-Filtering---------------------------- %%
 % disp('  Pre-Filtering started...');
+% Add morphological filters, opening, and opening on background only
+% Add wavelet filtering
 %     %Vat inligting/voorgrond effens weg -> hou maar by oorspronklik
 %     %% ---------------------Wiener Low Pass Filter--------------------- %%
 %     disp('    Wiener Low Pass Filter started...');
@@ -38,6 +40,7 @@ image_gray = rgb2gray(image);%onthou om te mention
 
 
 %% ------------------------------Binarize------------------------------ %%
+% Remember laplacian binarization
 %cprintf('Keywords', '  Binarization started...\n');
      %% -------------------------Rosenfeld------------------------ %%
      %bin-rosenfeld = 
@@ -61,7 +64,7 @@ image_gray = rgb2gray(image);%onthou om te mention
 
      %% ------------------------Niblack-----------------------%%
      %Slower
-     %Check each window with noise removal filters
+     %Local window size of 11 is optimal
 %      cprintf('Keywords', '    Niblack binarization started...\n');
 %      bin_niblack_3 = niblack(image_gray, 3);
 %      bin_niblack_5 = niblack(image_gray, 5);
@@ -112,7 +115,7 @@ cprintf('Keywords', '  Post-Filtering started...\n');
             %% -------------------Otsu-------------------- %%
      %Otsu: Destroys information/foreground
      
-%     cprintf('Keywords', '    Wiener Low Pass Filter started...\n');
+     cprintf('Keywords', '    Wiener Low Pass Filter started...\n');
 %      bin_otsu = ~imread('bin/otsu/6.bin-otsu.png');
 %      bin_otsu_post_wiener_3 = wiener2(bin_otsu, [3 3]);
 %      bin_otsu_post_wiener_5 = wiener2(bin_otsu, [5 5]);
@@ -135,7 +138,7 @@ cprintf('Keywords', '  Post-Filtering started...\n');
 
             %% ----------------Niblack------------- %%
      %Niblack: Improved, window size 17.
-%      bin_niblack_11 = imread('bin/niblack/6/bin_niblack_11.png');
+     bin_niblack_11 = imread('bin/niblack/6/bin_niblack_11.png');
 %      bin_niblack_11_post_wiener_3 = wiener2(bin_niblack_11, [3 3]);
 %      bin_niblack_11_post_wiener_5 = wiener2(bin_niblack_11, [5 5]);
 %      bin_niblack_11_post_wiener_7 = wiener2(bin_niblack_11, [7 7]);
@@ -143,10 +146,14 @@ cprintf('Keywords', '  Post-Filtering started...\n');
 %      bin_niblack_11_post_wiener_11 = wiener2(bin_niblack_11, [11 11]);
 %      bin_niblack_11_post_wiener_13 = wiener2(bin_niblack_11, [13 13]);
 %      bin_niblack_11_post_wiener_15 = wiener2(bin_niblack_11, [15 15]);
-%      bin_niblack_11_post_wiener_17 = wiener2(bin_niblack_11, [17 17]);
+     bin_niblack_11_post_wiener_17 = wiener2(bin_niblack_11, [17 17]);
 %      bin_niblack_11_post_wiener_19 = wiener2(bin_niblack_11, [19 19]);
 %      bin_niblack_11_post_wiener_21 = wiener2(bin_niblack_11, [21 21]);
 %      bin_niblack_11_post_wiener_23 = wiener2(bin_niblack_11, [23 23]);
+     
+    %Om Otsu post-binarize te doen is aansienlik beter.
+     bin_niblack_11_post_wiener_17_bin_otsu = imbinarize(bin_niblack_11_post_wiener_17);
+     imwrite(bin_niblack_11_post_wiener_17_bin_otsu, 'post/niblack/11/wiener/bin_otsu/6.bin_niblack_11_post_wiener_17_bin_otsu.png');
 % 
 %      
 %      path = 'post/niblack/11/wiener/6/';
@@ -163,7 +170,7 @@ cprintf('Keywords', '  Post-Filtering started...\n');
 %      imwrite(bin_niblack_11_post_wiener_21, strcat(path, 'bin_niblack_11_post_wiener_21.png'));
 %      imwrite(bin_niblack_11_post_wiener_23, strcat(path, 'bin_niblack_11_post_wiener_23.png'));
 %      
-%      cprintf('Strings', '    Wiener Low Pass Filter completed.\n');
+      cprintf('Strings', '    Wiener Low Pass Filter completed.\n');
 
 %     %% -----------------Median Low Pass Filter----------------- %%
      %image_bin_filter_median = medfilt2(image_bin_niblack_5);
