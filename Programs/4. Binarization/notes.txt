@@ -1,0 +1,115 @@
+2017/09/03
+
+1. Image Preporation
+    Images are reduced in size by 50%
+    Images cobverted to grayscale
+
+2. Pre-processing(Pre-filtering)
+    2.1 Wiener Low Pass Filter
+        - MATLAB's built in wiener2 function
+        - Kernel size did not seem to have impact on performance.
+        - 
+    
+    2.2 Median Low Pass Filter
+        
+    2.3 Low Pass Butterworth Filter
+        - Slightly slower than other low pass filters
+        
+    2.4 Gaussian Low Pass Filter
+        
+    2.5 Wavelett Transform
+    
+    2.6 Morphological Filters(Thinning)(Closing)
+    
+3. Binarization
+    Default Niblack and Otsu compliment eachother, where one doesn't work the other does.
+    
+    3.1 Otsu's Binarization Algorithm
+        - MATLAB's builtin imbinarize finction \cite()
+        - Works well but not on light ink as light ink is not seperated well enough from background.
+        - Global or Local ?
+        - Handles bleed through good
+        - Pre-processing filters has very little effect:
+            - This is because there is not much background noise
+            - Gaussian Low Pass Filter:
+                - No effect noticed
+            - Low Pass Butterworth Filter:
+                - No effect noticed
+            - Median Low Pass Filter:
+                - May remove some foreground slightly
+                - Rather not use
+            - Wiener Low Pass Filter
+                
+        - Post-processing filters:
+            -
+        
+    3.2 Niblack's Binarization Algorithm
+        - Works well where Otsu's fail.
+        - Slower
+        - The greater the local window size the more noise generated
+        - Too small local window size leaves text with double lines
+        - Greater local window size brings bleed through.
+        - Handles light ink well if local window size is not too small
+        - A local window size of 11 was found to work well.
+        - Pre-processing filters:
+            - Low Pass Butterworth Filter:
+                - No effect on Niblack's binarization algorithm.
+                - 
+            - Gaussian Low Pass Filter:
+                - Has very little noise removal.
+                - Not good enough to implement.
+            - Median Low Pass Filter:
+                - Some noise removal.
+                - Just like Gaussian but better.
+                - Could implement.
+            - Wiener Low Pass Filter:
+                - Very good noise removal.
+                - Much better than Median and Gauss.
+                - Kernel size 5:
+                    - Still leaves lines sometimes.
+                    - Removes some bleed through
+                    - May use but whatch it!
+                    - No! Too risky.
+                - Kernel size 7:
+                    - Still leaves lines.
+                    - Removes nearly all bleed through
+                    - Still leaves some noise around where bleed through were
+                    - But might remove some text.
+                    - Rather don't use.
+                - Kernel size 11:
+                - Kernel size 9:
+                    - Still leaves lines.
+                    - But might remove some text.
+                    - Rather don't use.
+                - Kernel size 11:
+                    - As good as kernel size 9
+                    - Removes lines.
+                    - Still leaves some noise around where lines were.
+                - Kernel size 13:
+                    - Removes lines.
+                    - Best pre-processing found.
+                - Kernel size 17:
+                    - Might removes some foreground text.
+                    - Removes lines.
+                    - Creates little noise around foreground text.
+                - Kernel sizes above 17 does not yield much improvement but generates much more noise around text and removes more foreground text.
+        - Post-processing filters:
+            - Wiener Low Pass Filter
+                - Very Good
+                - Kernel size of 17 was found to be optimal
+                - Wiener followed by Otsu binarization seems to work extremely well!! 
+            
+    3.3 Sauvola's Binarization Algorithm
+        - 
+        
+    3.4 Gatos & Pratikakis's Binarization Algorithm
+        - 
+        
+    3.5 ISODATA
+        - 
+        
+    3.6 Rosenfeld
+        -
+        
+    3.x Laplacian Binarization Algorithm
+        -
