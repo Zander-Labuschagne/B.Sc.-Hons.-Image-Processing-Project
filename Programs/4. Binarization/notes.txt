@@ -11,11 +11,13 @@
         - 
     
     2.2 Median Low Pass Filter
+        - MATLAB's built in medfilt2 function
         
     2.3 Low Pass Butterworth Filter
-        - Slightly slower than other low pass filters
+        - p181 in Intro IP book
         
     2.4 Gaussian Low Pass Filter
+        - MATLAB-s built in imgaussfilt function
         
     2.5 Wavelett Transform
     
@@ -39,9 +41,19 @@
                 - May remove some foreground slightly
                 - Rather not use
             - Wiener Low Pass Filter
-                
+                - Removes foreground text
+                - Don't use
         - Post-processing filters:
-            -
+            - Wiener Low Pass Filter
+                - Rather not post process.
+                - Removes foreground text with none other improvements.
+                - Gets worse as kernel size increases
+            - Median Low Pass Filter
+                - Dont use
+                - No improvement
+                - Liitle to no effect
+            - Gaussian Low Pass Filter
+                - Don't use
         
     3.2 Niblack's Binarization Algorithm
         - Works well where Otsu's fail.
@@ -51,7 +63,13 @@
         - Greater local window size brings bleed through.
         - Handles light ink well if local window size is not too small
         - A local window size of 11 was found to work well.
+        - By changing the value to -0.5 instead:
+            - Handles bleed through really well
+            - Excellent results, like appying Wiener filter
+            - Sometime remove foreground pixels, is the compromise worth it?
+            - Compare with Wiener filter
         - Pre-processing filters:
+            - Can replace Otsu by implementing pre-processing noise removal filters such as median and Wiener 5x5
             - Low Pass Butterworth Filter:
                 - No effect on Niblack's binarization algorithm.
                 - 
@@ -97,7 +115,8 @@
             - Wiener Low Pass Filter
                 - Very Good
                 - Kernel size of 17 was found to be optimal
-                - Wiener followed by Otsu binarization seems to work extremely well!! 
+                - Wiener followed by Otsu binarization seems to work extremely well!!
+                - Wiener followed by another Niblack binarization adds more noise, so use Otsu instead.
             
     3.3 Sauvola's Binarization Algorithm
         - 

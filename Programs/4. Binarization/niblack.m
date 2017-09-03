@@ -2,6 +2,8 @@ function image_niblack = niblack( image, local_window_size )
 %function to binarize image by using Niblack's binarization algorithm
 
     k = -0.2;% as suggested by Khurshid et al.
+    %k = -0.5;% as suggested by Zander.
+
 %     ssum = 0;
 % 
 %     %Calculate average of pixel intensities of whole image
