@@ -57,17 +57,20 @@
         
     3.2 Niblack's Binarization Algorithm
         - Works well where Otsu's fail.
-        - Slower
+        - Notibly slower
         - The greater the local window size the more noise generated
         - Too small local window size leaves text with double lines
         - Greater local window size brings bleed through.
         - Handles light ink well if local window size is not too small
         - A local window size of 11 was found to work well.
         - By changing the value to -0.5 instead:
+            - Increment of -0.5 (to -0.1) will increase noise
+            - Decrement of -0.5 (to -1) will decrease noise but removes text.
             - Handles bleed through really well
-            - Excellent results, like appying Wiener filter
+            - Excellent results
             - Sometime remove foreground pixels, is the compromise worth it?
-            - Compare with Wiener filter
+            - Do not use pre filter on -0.5, removes foreground text
+            - Compare with post Wiener filter
         - Pre-processing filters:
             - Can replace Otsu by implementing pre-processing noise removal filters such as median and Wiener 5x5
             - Low Pass Butterworth Filter:
@@ -80,6 +83,8 @@
                 - Some noise removal.
                 - Just like Gaussian but better.
                 - Could implement.
+                - For safety and reliability choose this one.
+                - Very good on light ink where all others fail
             - Wiener Low Pass Filter:
                 - Very good noise removal.
                 - Much better than Median and Gauss.
@@ -112,11 +117,16 @@
                     - Creates little noise around foreground text.
                 - Kernel sizes above 17 does not yield much improvement but generates much more noise around text and removes more foreground text.
         - Post-processing filters:
-            - Wiener Low Pass Filter
+            - Wiener Low Pass Filter:
+                - Kan dalk die Wiener kernel size op -0.5 kleiner as 11 maak?
+                - Kernel size 17 op -0.2 is goed.
                 - Very Good
-                - Kernel size of 17 was found to be optimal
+                - The bigger the kernel the less intensive the noise becomes(blur), but also the less binary it becomes
+                - Kernel size of 17 was found to be optimal for -0.2 or kernel size of 11 for -0.5
                 - Wiener followed by Otsu binarization seems to work extremely well!!
                 - Wiener followed by another Niblack binarization adds more noise, so use Otsu instead.
+            - Median Low Pass Filter:
+                - 
             
     3.3 Sauvola's Binarization Algorithm
         - 
@@ -132,3 +142,24 @@
         
     3.x Laplacian Binarization Algorithm
         -
+        
+    4. Conclusion:
+        - Pre-Processing:
+            - Only filter -0.2
+            - Median Pre-processing
+            - Wiener5 Pre-processing?? Eish
+        - Binarization:
+            - Definitely Niblack
+            - -0.2
+            - -0.5?? Eish handles bleedthrough sooo well
+            - Local window size 11 or 17 only if -0.5 
+        - Post-Processing:
+            - Definitely Wiener?
+            - Niblack11 -> Wiener11 -> Otsu -0.5
+            - Niblack11 -> Wiener17 -> Otsu beter vertroue maar meer ruis -> gebruik dan hough om lyne uit te haal
+        - Vir bleedthrough: kan mens nie die grysvlak waardes verspreiding kyk en bepaal of daar bleedthrough/bloubladsy is nie?
+            dan bepaal dit keuse tussen -0.5 en -0.2
+            
+        - Sover Niblack11 met Wiener17/11 filter en dan Otsu moet net kies tussen -0.2 en -0.5 of Niblack17 met Wiener17 filter en dan Otsu? hy vat bietjie voorgrond weg of net plain median
+        - 17 17 0.5; 17 17 0.2; 11 17 0.5; 11 11 0.5?; 11 17 0.2; 11 11 0.2?
+            
