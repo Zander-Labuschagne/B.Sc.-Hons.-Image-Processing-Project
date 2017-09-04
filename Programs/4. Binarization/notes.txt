@@ -126,10 +126,43 @@
                 - Wiener followed by Otsu binarization seems to work extremely well!!
                 - Wiener followed by another Niblack binarization adds more noise, so use Otsu instead.
             - Median Low Pass Filter:
-                - 
+                - It's ok with bleed through, not the best but comparable
             
     3.3 Sauvola's Binarization Algorithm
-        - 
+        - As slow as Niblack
+        - Suppose to be improvement of Niblack in regards to noise generation
+        - Check ref 19 for constants, also for Niblack in ref 13
+        - Very strict algorithm, better to use larger local window sizes.
+        - Not good, worse than Otsu.
+        - Higher k value results in stricter binarization, lower generates more noise.
+        - Local window size 13 works well if no other text is broken as a result.
+        - Local window size 13 handles bleedthrough somewhat ok unlike 33.
+        - Greater local window size is for thicker ink strokes.
+        - Could do with either pre or post processing filters to remove noise.
+        - Local window size makes whats there thicker but does nothing to what isn't there.
+        - Pre-processing filters:
+            - Low Pass Butterworth Filter:
+                - 
+                - 
+            - Gaussian Low Pass Filter:
+                - 
+            - Median Low Pass Filter:
+                - 
+            - Wiener Low Pass Filter:
+                - 
+                - Kernel size 7:
+                    - 
+                - Kernel size 11:
+                - Kernel size 9:
+                    - 
+                - Kernel size 11:
+                    - 
+                - Kernel size 13:
+                    - 
+                - Kernel size 17:
+                    - 
+        - Post-processing filters:
+            - 
         
     3.4 Gatos & Pratikakis's Binarization Algorithm
         - 
@@ -161,5 +194,7 @@
             dan bepaal dit keuse tussen -0.5 en -0.2
             
         - Sover Niblack11 met Wiener17/11 filter en dan Otsu moet net kies tussen -0.2 en -0.5 of Niblack17 met Wiener17 filter en dan Otsu? hy vat bietjie voorgrond weg of net plain median
-        - 17 17 0.5; 17 17 0.2; 11 17 0.5; 11 11 0.5?; 11 17 0.2; 11 11 0.2?
-            
+        - 17 17 0.5!; 17 17 0.2!; 11 17 0.5; 11 11 0.5?; 11 17 0.2!; 11 11 0.2?:
+            Still has bleed through, without Median pre-filter probably better
+        ^
+        | Nah Saouvola lyk baie beter met k = 0.065 kort net filters, Niblack-Z is ook dalk toepaslik, net op iets anders.    

@@ -6,21 +6,21 @@ close all;
 clear all;
 
 %% -------------------------Image Preperation------------------------- %%
-image = imread('PTDC0012.JPG');
+image = imread('PTDC0121.JPG');
 image = imresize(image, 0.5);
 image_gray = rgb2gray(image);
 
 
 
  %% ---------------------------Pre-Filtering---------------------------- %%
-%    cprintf('UnterminatedStrings', '  Pre-Binarization Filtering started...\n');
+    cprintf('UnterminatedStrings', '  Pre-Binarization Filtering started...\n');
 
      %% -------------------Wiener Low Pass Filter------------------- %%
-%       cprintf('Black', '    Wiener Low Pass Filter started...\n');
+      cprintf('Black', '    Wiener Low Pass Filter started...\n');
 %     path = 'prep/filters/wiener/12/';
-%       prep_wiener_5 = wiener2(image_gray, [5 5]);
-%      prep_wiener_7 = wiener2(image_gray, [7 7]);
-%      prep_wiener_9 = wiener2(image_gray, [9 9]);
+       prep_wiener_5 = wiener2(image_gray, [5 5]);
+      prep_wiener_7 = wiener2(image_gray, [7 7]);
+      prep_wiener_9 = wiener2(image_gray, [9 9]);
 %      prep_wiener_11 = wiener2(image_gray, [11 11]);
 %      prep_wiener_13 = wiener2(image_gray, [13 13]);
      
@@ -30,14 +30,14 @@ image_gray = rgb2gray(image);
 %      imwrite(prep_wiener_11, strcat(path, 'prep_wiener_11.png'));
 %      imwrite(prep_wiener_13, strcat(path, 'prep_wiener_13.png'));
 
-%       cprintf('Blue', '    Wiener Low Pass Filter completed.\n');
+       cprintf('Blue', '    Wiener Low Pass Filter completed.\n');
 
      %% ------------------Median Low Pass Filter------------------ %%
-%        cprintf('Black', '    Median Low Pass Filter started...\n');
+        cprintf('Black', '    Median Low Pass Filter started...\n');
 %       path = 'prep/filters/median/';
-%         prep_median = medfilt2(image_gray);
+         prep_median = medfilt2(image_gray);
 %       imwrite(prep_median, strcat(path, '12.prep_median.png'));
-%        cprintf('Blue', '    Median Low Pass Filter completed.\n');
+        cprintf('Blue', '    Median Low Pass Filter completed.\n');
 
      %% -------------------Low Pass Butterworth Filter------------------ %%
 %      cprintf('Black', '    Butterworth Low Pass Filter started...\n');
@@ -60,19 +60,19 @@ image_gray = rgb2gray(image);
      
 
      %% ----------------Gaussian Low Pass Filter------------------ %%
-%      cprintf('Black', '    Gaussian Low Pass Filter started...\n');
+      cprintf('Black', '    Gaussian Low Pass Filter started...\n');
 %      path = 'prep/filters/gauss/';
-%      prep_gauss = imgaussfilt(image_gray);
+      prep_gauss = imgaussfilt(image_gray);
 %      imwrite(prep_gauss, strcat(path, '12.prep_gauss.png'));
-%      cprintf('Blue', '    Gaussian Low Pass Filter completed.\n');
+      cprintf('Blue', '    Gaussian Low Pass Filter completed.\n');
      %% --------------------Wavelet Transform-------------------------%%
        
-%   cprintf('Strings', '  Pre-Binarization Filtering completed.\n');
+   cprintf('Strings', '  Pre-Binarization Filtering completed.\n');
 
 
 
 %% ------------------------------Binarize------------------------------ %%
-%  cprintf('UnterminatedStrings', '  Binarization started...\n');
+ cprintf('UnterminatedStrings', '  Binarization started...\n');
      %% -------------------------Rosenfeld------------------------ %%
      %bin-rosenfeld = 
      %% ---------------------------Otsu-------------------------- %%
@@ -156,16 +156,42 @@ image_gray = rgb2gray(image);
 % imwrite(prep_butterworth_500_3_bin_niblack_11, strcat(path, 'prep-butterworth_500_3_bin-niblack_11.png'));
   
 %    cprintf('Blue', '    Niblack binarization completed.\n');
-%      
-%  cprintf('Strings', '  Binarization completed.\n');
+
+     %% ------------------------Sauvola-----------------------%%
+        cprintf('Black', '    Sauvola binarization started...\n');
+        
+        
+        path = 'bin/sauvola/12/k0.065/';
+        
+        bin_sauvola_13 = sauvola(image_gray, 13);
+        imwrite(bin_sauvola_13, strcat(path, 'bin_sauvola_13.png'));
+%         bin_sauvola_15 = sauvola(image_gray, 15);
+%         imwrite(bin_sauvola_15, strcat(path, 'bin_sauvola_15.png'));
+%         bin_sauvola_17 = sauvola(image_gray, 17);
+%         imwrite(bin_sauvola_17, strcat(path, 'bin_sauvola_17.png'));
+%         bin_sauvola_19 = sauvola(image_gray, 19);
+%         imwrite(bin_sauvola_19, strcat(path, 'bin_sauvola_19.png'));
+%         bin_sauvola_21 = sauvola(image_gray, 21);
+%         imwrite(bin_sauvola_21, strcat(path, 'bin_sauvola_21.png'));
+        bin_sauvola_33 = sauvola(image_gray, 33);
+        imwrite(bin_sauvola_33, strcat(path, 'bin_sauvola_33.png'));
+%         bin_sauvola_25 = sauvola(image_gray, 25);
+%         imwrite(bin_sauvola_25, strcat(path, 'bin_sauvola_25.png'));
+        bin_sauvola_50 = sauvola(image_gray, 50);
+        imwrite(bin_sauvola_50, strcat(path, 'bin_sauvola_50_.png'));
+        
+        
+        
+        cprintf('Blue', '    Sauvola binarization completed.\n');
+ cprintf('Strings', '  Binarization completed.\n');
      
      
      
 %% --------------------------Post-Filtering--------------------------- %%
- cprintf('UnterminatedStrings', '  Post-Binarization Filtering started...\n');
+%  cprintf('UnterminatedStrings', '  Post-Binarization Filtering started...\n');
 
      %% ---------------------Wiener Low Pass Filter--------------------- %%
-     cprintf('Black', '    Wiener Low Pass Filter started...\n');
+%      cprintf('Black', '    Wiener Low Pass Filter started...\n');
             %% -------------------Otsu-------------------- %%     
 %      bin_otsu = imread('bin/otsu/6.bin-otsu.png');
      
@@ -189,32 +215,32 @@ image_gray = rgb2gray(image);
 
 
             %% ----------------Niblack------------- %%
-%      path = 'bin/niblack/1/';
+%       path = 'bin/niblack/12/';
 %      bin_niblack_17 = imread(strcat(path, 'bin_niblack_17.png'));
-%      bin_niblack_11 = imread(strcat(path, 'bin_niblack_11.png'));
+%       bin_niblack_11 = imread(strcat(path, 'bin_niblack_11.png'));
 
 %      bin_niblack_17_post_wiener_3 = wiener2(bin_niblack_17, [3 3]);
 %      bin_niblack_17_post_wiener_5 = wiener2(bin_niblack_17, [5 5]);
 %      bin_niblack_17_post_wiener_7 = wiener2(bin_niblack_17, [7 7]);
 %      bin_niblack_17_post_wiener_9 = wiener2(bin_niblack_17, [9 9]);
- path = 'prep/niblack/12/';
- prep_median_bin_niblack_11 = imread(strcat(path, 'prep-median_bin-niblack_11.png'));
- prep_median_bin_niblack_11_05 = imread(strcat(path, 'prep-median_bin-niblack_11_-0.5.png'));
- prep_median_bin_niblack_17 = imread(strcat(path, 'prep-median_bin-niblack_17.png'));
- prep_median_bin_niblack_17_05 = imread(strcat(path, 'prep-median_bin-niblack_17_-0.5.png'));
+%  path = 'bin/niblack/1/';
+%  prep_median_bin_niblack_11 = imread(strcat(path, 'prep-median_bin-niblack_11.png'));
+%  prep_median_bin_niblack_11_05 = imread(strcat(path, 'prep-median_bin-niblack_11_-0.5.png'));
+%  prep_median_bin_niblack_17 = imread(strcat(path, 'prep-median_bin-niblack_17.png'));
+%  prep_median_bin_niblack_17_05 = imread(strcat(path, 'prep-median_bin-niblack_17_-0.5.png'));
 
-        prep_median_bin_niblack_17_post_wiener_11 = wiener2(prep_median_bin_niblack_17, [11 11]);
-        prep_median_bin_niblack_17_05_post_wiener_11 = wiener2(prep_median_bin_niblack_17_05, [11 11]);
+%         prep_median_bin_niblack_17_post_wiener_11 = wiener2(prep_median_bin_niblack_17, [11 11]);
+%         prep_median_bin_niblack_17_05_post_wiener_11 = wiener2(prep_median_bin_niblack_17_05, [11 11]);
 
 %       bin_niblack_17_post_wiener_13 = wiener2(bin_niblack_17, [13 13]);
-        prep_median_bin_niblack_11_post_wiener_11 = wiener2(prep_median_bin_niblack_11, [11 11]);
-        prep_median_bin_niblack_11_05_post_wiener_11 = wiener2(prep_median_bin_niblack_11_05, [11 11]);
-%       bin_niblack_11_post_wiener_13 = wiener2(bin_niblack_11, [13 13]);
+%         prep_median_bin_niblack_11_post_wiener_11 = wiener2(prep_median_bin_niblack_11, [11 11]);
+%         prep_median_bin_niblack_11_05_post_wiener_11 = wiener2(prep_median_bin_niblack_11_05, [11 11]);
+%        bin_niblack_11_post_median = medfilt2(bin_niblack_11);
 %      bin_niblack_17_post_wiener_15 = wiener2(bin_niblack_17, [15 15]);
-        prep_median_bin_niblack_17_post_wiener_17 = wiener2(prep_median_bin_niblack_17, [17 17]);
-        prep_median_bin_niblack_17_05_post_wiener_17 = wiener2(prep_median_bin_niblack_17_05, [17 17]);
-        prep_median_bin_niblack_11_post_wiener_17 = wiener2(prep_median_bin_niblack_11, [17 17]);
-        prep_median_bin_niblack_11_05_post_wiener_17 = wiener2(prep_median_bin_niblack_11_05, [17 17]);
+%         prep_median_bin_niblack_17_post_wiener_17 = wiener2(prep_median_bin_niblack_17, [17 17]);
+%         prep_median_bin_niblack_17_05_post_wiener_17 = wiener2(prep_median_bin_niblack_17_05, [17 17]);
+%         prep_median_bin_niblack_11_post_wiener_17 = wiener2(prep_median_bin_niblack_11, [17 17]);
+%         prep_median_bin_niblack_11_05_post_wiener_17 = wiener2(prep_median_bin_niblack_11_05, [17 17]);
 
 %       bin_niblack_17_post_wiener_19 = wiener2(bin_niblack_17, [19 19]);
 %       bin_niblack_11_post_wiener_19 = wiener2(bin_niblack_11, [19 19]);
@@ -226,15 +252,15 @@ image_gray = rgb2gray(image);
      
 %      bin_niblack_11_post_wiener_11_bin_otsu = imbinarize(bin_niblack_11_post_wiener_11);
 %      bin_niblack_11_post_wiener_13_bin_otsu = imbinarize(bin_niblack_11_post_wiener_13);
-       prep_median_bin_niblack_11_post_wiener_17_bin_otsu = imbinarize(prep_median_bin_niblack_11_post_wiener_17);
-       prep_median_bin_niblack_11_post_wiener_11_bin_otsu = imbinarize(prep_median_bin_niblack_11_post_wiener_11);
-       prep_median_bin_niblack_17_post_wiener_11_bin_otsu = imbinarize(prep_median_bin_niblack_17_post_wiener_11);
-       prep_median_bin_niblack_17_post_wiener_17_bin_otsu = imbinarize(prep_median_bin_niblack_17_post_wiener_17);
-       
-       prep_median_bin_niblack_11_05_post_wiener_17_bin_otsu = imbinarize(prep_median_bin_niblack_11_post_wiener_17);
-       prep_median_bin_niblack_11_05_post_wiener_11_bin_otsu = imbinarize(prep_median_bin_niblack_11_post_wiener_11);
-       prep_median_bin_niblack_17_05_post_wiener_11_bin_otsu = imbinarize(prep_median_bin_niblack_17_post_wiener_11);
-       prep_median_bin_niblack_17_05_post_wiener_17_bin_otsu = imbinarize(prep_median_bin_niblack_17_post_wiener_17);
+%        prep_median_bin_niblack_11_post_wiener_17_bin_otsu = imbinarize(prep_median_bin_niblack_11_post_wiener_17);
+%        prep_median_bin_niblack_11_post_wiener_11_bin_otsu = imbinarize(prep_median_bin_niblack_11_post_wiener_11);
+%        prep_median_bin_niblack_17_post_wiener_11_bin_otsu = imbinarize(prep_median_bin_niblack_17_post_wiener_11);
+%        prep_median_bin_niblack_17_post_wiener_17_bin_otsu = imbinarize(prep_median_bin_niblack_17_post_wiener_17);
+%        
+%        prep_median_bin_niblack_11_05_post_wiener_17_bin_otsu = imbinarize(prep_median_bin_niblack_11_post_wiener_17);
+%        prep_median_bin_niblack_11_05_post_wiener_11_bin_otsu = imbinarize(prep_median_bin_niblack_11_post_wiener_11);
+%        prep_median_bin_niblack_17_05_post_wiener_11_bin_otsu = imbinarize(prep_median_bin_niblack_17_post_wiener_11);
+%        prep_median_bin_niblack_17_05_post_wiener_17_bin_otsu = imbinarize(prep_median_bin_niblack_17_post_wiener_17);
 
 %      bin_niblack_11_post_wiener_19_bin_otsu = imbinarize(bin_niblack_11_post_wiener_19);
 %      bin_niblack_11_post_wiener_21_bin_otsu = imbinarize(bin_niblack_11_post_wiener_21);
@@ -245,21 +271,21 @@ image_gray = rgb2gray(image);
 %      bin_niblack_17_post_wiener_19_bin_otsu = imbinarize(bin_niblack_17_post_wiener_19);
 %      bin_niblack_17_post_wiener_21_bin_otsu = imbinarize(bin_niblack_17_post_wiener_21);
      
-       path = 'full/12/';
-      imwrite(prep_median_bin_niblack_11_post_wiener_17_bin_otsu, strcat(path, 'prep_median_bin_niblack_11_-0.2_post_wiener_17_bin_otsu.png'));
-      imwrite(prep_median_bin_niblack_11_post_wiener_11_bin_otsu, strcat(path, 'prep_median_bin_niblack_11_-0.2_post_wiener_11_bin_otsu.png'));
-      imwrite(prep_median_bin_niblack_17_post_wiener_11_bin_otsu, strcat(path, 'prep_median_bin_niblack_17_-0.2_post_wiener_11_bin_otsu.png'));
-      imwrite(prep_median_bin_niblack_17_post_wiener_17_bin_otsu, strcat(path, 'prep_median_bin_niblack_17_-0.2_post_wiener_17_bin_otsu.png'));
-      
-      imwrite(prep_median_bin_niblack_11_05_post_wiener_17_bin_otsu, strcat(path, 'prep_median_bin_niblack_11_-0.5_post_wiener_17_bin_otsu.png'));
-      imwrite(prep_median_bin_niblack_11_05_post_wiener_11_bin_otsu, strcat(path, 'prep_median_bin_niblack_11_-0.5_post_wiener_11_bin_otsu.png'));
-      imwrite(prep_median_bin_niblack_17_05_post_wiener_11_bin_otsu, strcat(path, 'prep_median_bin_niblack_17_-0.5_post_wiener_11_bin_otsu.png'));
-      imwrite(prep_median_bin_niblack_17_05_post_wiener_17_bin_otsu, strcat(path, 'prep_median_bin_niblack_17_-0.5_post_wiener_17_bin_otsu.png'));
+%        path = 'full/12/';
+%       imwrite(prep_median_bin_niblack_11_post_wiener_17_bin_otsu, strcat(path, 'prep_median_bin_niblack_11_-0.2_post_wiener_17_bin_otsu.png'));
+%       imwrite(prep_median_bin_niblack_11_post_wiener_11_bin_otsu, strcat(path, 'prep_median_bin_niblack_11_-0.2_post_wiener_11_bin_otsu.png'));
+%       imwrite(prep_median_bin_niblack_17_post_wiener_11_bin_otsu, strcat(path, 'prep_median_bin_niblack_17_-0.2_post_wiener_11_bin_otsu.png'));
+%       imwrite(prep_median_bin_niblack_17_post_wiener_17_bin_otsu, strcat(path, 'prep_median_bin_niblack_17_-0.2_post_wiener_17_bin_otsu.png'));
+%       
+%       imwrite(prep_median_bin_niblack_11_05_post_wiener_17_bin_otsu, strcat(path, 'prep_median_bin_niblack_11_-0.5_post_wiener_17_bin_otsu.png'));
+%       imwrite(prep_median_bin_niblack_11_05_post_wiener_11_bin_otsu, strcat(path, 'prep_median_bin_niblack_11_-0.5_post_wiener_11_bin_otsu.png'));
+%       imwrite(prep_median_bin_niblack_17_05_post_wiener_11_bin_otsu, strcat(path, 'prep_median_bin_niblack_17_-0.5_post_wiener_11_bin_otsu.png'));
+%       imwrite(prep_median_bin_niblack_17_05_post_wiener_17_bin_otsu, strcat(path, 'prep_median_bin_niblack_17_-0.5_post_wiener_17_bin_otsu.png'));
       %imwrite(bin_niblack_11_post_wiener_21_bin_otsu, strcat(path, 'bin_niblack_11_post_wiener_21_bin_otsu.png'));
      
-%      path = 'post/niblack/17/wiener/1/';
+%       path = 'post/niblack/11/median/12/';
 %      imwrite(bin_niblack_17_post_wiener_11_bin_otsu, strcat(path, 'bin_niblack_17_post_wiener_11_bin_otsu.png'));
-%      imwrite(bin_niblack_17_post_wiener_13_bin_otsu, strcat(path, 'bin_niblack_17_post_wiener_13_bin_otsu.png'));
+%       imwrite(bin_niblack_11_post_median, strcat(path, 'bin_niblack_11_post_median.png'));
 %      imwrite(bin_niblack_17_post_wiener_17_bin_otsu, strcat(path, 'bin_niblack_17_post_wiener_17_bin_otsu.png'));
 %      imwrite(bin_niblack_17_post_wiener_19_bin_otsu, strcat(path, 'bin_niblack_17_post_wiener_19_bin_otsu.png'));
 %      imwrite(bin_niblack_17_post_wiener_21_bin_otsu, strcat(path, 'bin_niblack_17_post_wiener_21_bin_otsu.png'));
@@ -275,7 +301,7 @@ image_gray = rgb2gray(image);
 %      imwrite(bin_niblack_17_post_wiener_21, strcat(path, 'bin_niblack_17_post_wiener_21.png'));
 %      imwrite(bin_niblack_17_post_wiener_23, strcat(path, 'bin_niblack_17_post_wiener_23.png'));
      
-     cprintf('Blue', '    Wiener Low Pass Filter completed.\n');
+%      cprintf('Blue', '    Wiener Low Pass Filter completed.\n');
 
      %% ----------------------Median Low Pass Filter-------------------- %%
 %         cprintf('Black', '    Median Low Pass Filter started...\n');
@@ -292,7 +318,7 @@ image_gray = rgb2gray(image);
      %% ---------------Low Pass Butterworth Filter-------------- %%
      %image_bin_filter_butterworth = butterworthbpf(image_bin_niblack_5, 100, 1, 8);
         %  bin_niblack_11_post_gauss = 
-  cprintf('Strings', '  Post-Binarization Filtering Completed.\n');
+%   cprintf('Strings', '  Post-Binarization Filtering Completed.\n');
 
 
 %% ------------------------------Finalize------------------------------ %%
