@@ -5,6 +5,7 @@ function image_sauvola = sauvola(image, local_window_size)
     R = 128;
     S = std2(image);
     k = 0.065;
+    %k = 0.2;%spesiaal vir Gatos
     
     %Binarize using values calculated above
     for i = 1 : size(image, 1)

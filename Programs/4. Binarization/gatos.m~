@@ -169,7 +169,7 @@ function bin_gatos = gatos(image, local_window_size)
 %         end;
 %     end;
 
-    pre = wiener2(image, [3 3]);
+    pre = wiener2(image, []);
     cprintf('Green', '      Gatos preprocessing finished.\n');
 
     cprintf('UnterminatedStrings', '      Sauvola binarization for Gatos binarization started...\n');

@@ -200,9 +200,7 @@ image_gray = rgb2gray(image);
          
          bin_gatos = gatos(image_gray, 3);
          imwrite(bin_gatos, 'bin/gatos/1.bin_gatos.png');
-
          cprintf('Blue', '    Sauvola binarization completed.\n');
-
         
  cprintf('Strings', '  Binarization completed.\n');
      
@@ -343,6 +341,13 @@ image_gray = rgb2gray(image);
 
 
 %% ------------------------------Finalize------------------------------ %%
+notify('DONE!', '', '', '');
+load handel;
+%handel
+%gong
+%chirp
+%sound(y,Fs);
+sound(y, Fs);
 
 cprintf('Comments', 'Done.\n');
 

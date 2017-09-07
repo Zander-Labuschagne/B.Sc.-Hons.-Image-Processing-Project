@@ -30,7 +30,7 @@ function image_niblack = niblack( image, local_window_size )
             msum = 0;
             for iii = i - fix(local_window_size / 2) : i + fix(local_window_size / 2)
                 if(iii < 1)
-                    v = iii + fix(local_window_size / 2);
+                    v =   + fix(local_window_size / 2);
                 elseif(iii > size(image, 1))
                     v = iii - fix(local_window_size / 2);
                 else
