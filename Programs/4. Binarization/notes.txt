@@ -173,6 +173,16 @@
     3.6 Rosenfeld
         -
         
+    3.7 Average Global Binarization:
+        - Prodeuces better foreground results but classify too much background as foreground.
+        - Very quick.
+        - Very bad with bleedthrough.
+        - But the few that are good are very beautiful.
+        
+    3.8 Median Global Binarization:
+        - Worse than average binarization on bleedthrough
+        - Does not produce results as good as average but both have same problems with differentiating foreground from background.
+        
     3.x Laplacian Binarization Algorithm
         -
         

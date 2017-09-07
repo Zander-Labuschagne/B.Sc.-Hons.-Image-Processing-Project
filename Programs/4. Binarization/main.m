@@ -6,21 +6,21 @@ close all;
 clear all;
 
 %% -------------------------Image Preperation------------------------- %%
-image = imread('PTDC0121.JPG');
+image = imread('PTDC0012.JPG');
 image = imresize(image, 0.5);
 image_gray = rgb2gray(image);
 
 
 
  %% ---------------------------Pre-Filtering---------------------------- %%
-    cprintf('UnterminatedStrings', '  Pre-Binarization Filtering started...\n');
+%     cprintf('UnterminatedStrings', '  Pre-Binarization Filtering started...\n');
 
      %% -------------------Wiener Low Pass Filter------------------- %%
-      cprintf('Black', '    Wiener Low Pass Filter started...\n');
+%       cprintf('Black', '    Wiener Low Pass Filter started...\n');
 %     path = 'prep/filters/wiener/12/';
-       prep_wiener_5 = wiener2(image_gray, [5 5]);
-      prep_wiener_7 = wiener2(image_gray, [7 7]);
-      prep_wiener_9 = wiener2(image_gray, [9 9]);
+%        prep_wiener_5 = wiener2(image_gray, [5 5]);
+%       prep_wiener_7 = wiener2(image_gray, [7 7]);
+%       prep_wiener_9 = wiener2(image_gray, [9 9]);
 %      prep_wiener_11 = wiener2(image_gray, [11 11]);
 %      prep_wiener_13 = wiener2(image_gray, [13 13]);
      
@@ -30,14 +30,14 @@ image_gray = rgb2gray(image);
 %      imwrite(prep_wiener_11, strcat(path, 'prep_wiener_11.png'));
 %      imwrite(prep_wiener_13, strcat(path, 'prep_wiener_13.png'));
 
-       cprintf('Blue', '    Wiener Low Pass Filter completed.\n');
+%        cprintf('Blue', '    Wiener Low Pass Filter completed.\n');
 
      %% ------------------Median Low Pass Filter------------------ %%
-        cprintf('Black', '    Median Low Pass Filter started...\n');
+%         cprintf('Black', '    Median Low Pass Filter started...\n');
 %       path = 'prep/filters/median/';
-         prep_median = medfilt2(image_gray);
+%          prep_median = medfilt2(image_gray);
 %       imwrite(prep_median, strcat(path, '12.prep_median.png'));
-        cprintf('Blue', '    Median Low Pass Filter completed.\n');
+%         cprintf('Blue', '    Median Low Pass Filter completed.\n');
 
      %% -------------------Low Pass Butterworth Filter------------------ %%
 %      cprintf('Black', '    Butterworth Low Pass Filter started...\n');
@@ -60,19 +60,32 @@ image_gray = rgb2gray(image);
      
 
      %% ----------------Gaussian Low Pass Filter------------------ %%
-      cprintf('Black', '    Gaussian Low Pass Filter started...\n');
+%       cprintf('Black', '    Gaussian Low Pass Filter started...\n');
 %      path = 'prep/filters/gauss/';
-      prep_gauss = imgaussfilt(image_gray);
+%       prep_gauss = imgaussfilt(image_gray);
 %      imwrite(prep_gauss, strcat(path, '12.prep_gauss.png'));
-      cprintf('Blue', '    Gaussian Low Pass Filter completed.\n');
+%       cprintf('Blue', '    Gaussian Low Pass Filter completed.\n');
      %% --------------------Wavelet Transform-------------------------%%
        
-   cprintf('Strings', '  Pre-Binarization Filtering completed.\n');
+%    cprintf('Strings', '  Pre-Binarization Filtering completed.\n');
 
 
 
 %% ------------------------------Binarize------------------------------ %%
  cprintf('UnterminatedStrings', '  Binarization started...\n');
+ 
+    %% ------------------------ Global Average --------------------- %%
+%         cprintf('Black', '    Average binarization started...\n');
+%         bin_avg = avgbin(image_gray);
+%         imwrite(bin_avg, 'bin/average/12.bin_avg.png');
+%         cprintf('Blue', '    Average binarization completed.\n');
+        
+     %% ------------------------ Global Median --------------------- %%
+%         cprintf('Black', '    Median binarization started...\n');
+%         bin_med = medbin(image_gray);
+%         imwrite(bin_med, 'bin/median/12.bin_med.png');
+%         cprintf('Blue', '    Median binarization completed.\n');
+    
      %% -------------------------Rosenfeld------------------------ %%
      %bin-rosenfeld = 
      %% ---------------------------Otsu-------------------------- %%
@@ -108,7 +121,7 @@ image_gray = rgb2gray(image);
 %      bin_niblack_5 = niblack(image_gray, 5);
 %      bin_niblack_7 = niblack(image_gray, 7);
 %      bin_niblack_9 = niblack(image_gray, 9);
-%      bin_niblack_11 = niblack(image_gray, 11);
+%       bin_niblack_11 = niblack(image_gray, 11);
 %      bin_niblack_13 = niblack(image_gray, 13);
 %      bin_niblack_15 = niblack(image_gray, 15);
 %      bin_niblack_17 = niblack(image_gray, 17);
@@ -158,13 +171,13 @@ image_gray = rgb2gray(image);
 %    cprintf('Blue', '    Niblack binarization completed.\n');
 
      %% ------------------------Sauvola-----------------------%%
-        cprintf('Black', '    Sauvola binarization started...\n');
-        
-        
-        path = 'bin/sauvola/12/k0.065/';
-        
-        bin_sauvola_13 = sauvola(image_gray, 13);
-        imwrite(bin_sauvola_13, strcat(path, 'bin_sauvola_13.png'));
+%         cprintf('Black', '    Sauvola binarization started...\n');
+%         
+%         
+%         path = 'bin/sauvola/12/k0.065/';
+%         
+%         bin_sauvola_13 = sauvola(image_gray, 13);
+%         imwrite(bin_sauvola_13, strcat(path, 'bin_sauvola_13.png'));
 %         bin_sauvola_15 = sauvola(image_gray, 15);
 %         imwrite(bin_sauvola_15, strcat(path, 'bin_sauvola_15.png'));
 %         bin_sauvola_17 = sauvola(image_gray, 17);
@@ -173,16 +186,24 @@ image_gray = rgb2gray(image);
 %         imwrite(bin_sauvola_19, strcat(path, 'bin_sauvola_19.png'));
 %         bin_sauvola_21 = sauvola(image_gray, 21);
 %         imwrite(bin_sauvola_21, strcat(path, 'bin_sauvola_21.png'));
-        bin_sauvola_33 = sauvola(image_gray, 33);
-        imwrite(bin_sauvola_33, strcat(path, 'bin_sauvola_33.png'));
+%         bin_sauvola_33 = sauvola(image_gray, 33);
+%         imwrite(bin_sauvola_33, strcat(path, 'bin_sauvola_33.png'));
 %         bin_sauvola_25 = sauvola(image_gray, 25);
 %         imwrite(bin_sauvola_25, strcat(path, 'bin_sauvola_25.png'));
-        bin_sauvola_50 = sauvola(image_gray, 50);
-        imwrite(bin_sauvola_50, strcat(path, 'bin_sauvola_50_.png'));
+%         bin_sauvola_50 = sauvola(image_gray, 50);
+%         imwrite(bin_sauvola_50, strcat(path, 'bin_sauvola_50_.png'));
+%   
+%         cprintf('Blue', '    Sauvola binarization completed.\n');
+
+    %% --------------------------Gatos---------------------------%%
+         cprintf('Black', '    Gatos binarization started...\n');
+         
+         bin_gatos = gatos(image_gray, 3);
+         imwrite(bin_gatos, 'bin/gatos/1.bin_gatos.png');
+
+         cprintf('Blue', '    Sauvola binarization completed.\n');
+
         
-        
-        
-        cprintf('Blue', '    Sauvola binarization completed.\n');
  cprintf('Strings', '  Binarization completed.\n');
      
      
