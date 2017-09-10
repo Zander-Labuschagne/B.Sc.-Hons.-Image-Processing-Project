@@ -1,4 +1,4 @@
-function bin_avg = avgbin( image )
+function bin_avg = avgbin(image, factor)
 %Binarize image globally using the average pixel intensities of the image 
 
     avg = mean2(image);
@@ -6,7 +6,7 @@ function bin_avg = avgbin( image )
     
     for i = 1 : size(image, 1)
         for ii = 1 : size(image, 2)
-            if image(i, ii) < avg
+            if image(i, ii) + image(i, ii) * factor < avg
                 bin_avg(i, ii) = 0;
             else
                 bin_avg(i, ii) = 1;

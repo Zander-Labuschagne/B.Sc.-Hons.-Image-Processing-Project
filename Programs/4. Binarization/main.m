@@ -6,9 +6,12 @@ close all;
 clear all;
 
 %% -------------------------Image Preperation------------------------- %%
-image = imread('PTDC0012.JPG');
-image = imresize(image, 0.5);
+image = imread('PTDC0121.JPG');
+image = imresize(image, 0.2);
 image_gray = rgb2gray(image);
+figure('Name', 'Original', 'NumberTitle', 'off');
+imagesc(image_gray);
+colormap('gray');
 
 
 
@@ -76,8 +79,8 @@ image_gray = rgb2gray(image);
  
     %% ------------------------ Global Average --------------------- %%
 %         cprintf('Black', '    Average binarization started...\n');
-%         bin_avg = avgbin(image_gray);
-%         imwrite(bin_avg, 'bin/average/12.bin_avg.png');
+%         bin_avg = avgbin(image_gray, 0.05);
+%         imwrite(bin_avg, 'bin/average/0.05/12.bin_avg.png');
 %         cprintf('Blue', '    Average binarization completed.\n');
         
      %% ------------------------ Global Median --------------------- %%
@@ -197,8 +200,11 @@ image_gray = rgb2gray(image);
 
     %% --------------------------Gatos---------------------------%%
          cprintf('Black', '    Gatos binarization started...\n');
-         bin_gatos = gatos(image_gray, 3, 11);
-         imwrite(bin_gatos, 'bin/gatos/0.065/11/1.bin_gatos.png');
+         bin_gatos = uint8(gatos(image_gray, 3, 11));
+         figure('Name', 'Background', 'NumberTitle', 'off');
+         imagesc(bin_gatos);
+         colormap('gray');
+         imwrite(uint8(bin_gatos), 'bin/gatos/original/backgrounds/12.bin_gatos.png');
          cprintf('Blue', '    Gatos binarization completed.\n');
         
  cprintf('Strings', '  Binarization completed.\n');

@@ -165,7 +165,16 @@
             - 
         
     3.4 Gatos & Pratikakis's Binarization Algorithm
-        - 
+        - Pre-processing:
+            - Wiener 3 window size
+            - Improvement
+            - Self implemented is very slow.
+        - Binarization
+            - Sauvola
+            - Extrack and interpolate background
+            - Combine background and filtered image for binarization.
+            - Sauvola is slow as is backround estimation.
+            - use 0.2 * image size for speed
         
     3.5 ISODATA
         - 
@@ -178,11 +187,12 @@
         - Very quick.
         - Very bad with bleedthrough.
         - But the few that are good are very beautiful.
+        - Have tried adding a manipulation factor, improved results hawever not good enough. Same effects experienced as with median global binarization with manipulation facor but just not as extreme.
         
     3.8 Median Global Binarization:
         - Worse than average binarization on bleedthrough
         - Does not produce results as good as average but both have same problems with differentiating foreground from background.
-        - Have tried adding a manipulation factor, better results are achieved when threshold is increased by a factor of 0.1 * x, however this is still not good enough as it does not bring enough foreground yet still too much background. Same goes for the addition factor of 8 and 10.
+        - Have tried adding a manipulation factor, better results are achieved when threshold is increased by a factor of 0.1 * x, however this is still not good enough as it does not bring enough foreground yet still too much background. Same goes for the addition factor of 8 and 10 but these are not as good as * 0.1 or 0.2.
         
     3.x Laplacian Binarization Algorithm
         -
