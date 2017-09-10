@@ -82,8 +82,8 @@ image_gray = rgb2gray(image);
         
      %% ------------------------ Global Median --------------------- %%
 %         cprintf('Black', '    Median binarization started...\n');
-%         bin_med = medbin(image_gray);
-%         imwrite(bin_med, 'bin/median/12.bin_med.png');
+%         bin_med = medbin(image_gray, 8);
+%         imwrite(bin_med, 'bin/median/8/2.bin_med.png');
 %         cprintf('Blue', '    Median binarization completed.\n');
     
      %% -------------------------Rosenfeld------------------------ %%
@@ -197,10 +197,9 @@ image_gray = rgb2gray(image);
 
     %% --------------------------Gatos---------------------------%%
          cprintf('Black', '    Gatos binarization started...\n');
-         
-         bin_gatos = gatos(image_gray, 3);
-         imwrite(bin_gatos, 'bin/gatos/1.bin_gatos.png');
-         cprintf('Blue', '    Sauvola binarization completed.\n');
+         bin_gatos = gatos(image_gray, 3, 11);
+         imwrite(bin_gatos, 'bin/gatos/0.065/11/1.bin_gatos.png');
+         cprintf('Blue', '    Gatos binarization completed.\n');
         
  cprintf('Strings', '  Binarization completed.\n');
      
@@ -341,13 +340,15 @@ image_gray = rgb2gray(image);
 
 
 %% ------------------------------Finalize------------------------------ %%
-notify('DONE!', '', '', '');
-load handel;
+load chirp;
+sound(y, 2 * Fs);
+notify('DONE!', 'MATLAB R2017a', '', 'Sosumi');
+
 %handel
 %gong
 %chirp
 %sound(y,Fs);
-sound(y, Fs);
+
 
 cprintf('Comments', 'Done.\n');
 

@@ -182,6 +182,7 @@
     3.8 Median Global Binarization:
         - Worse than average binarization on bleedthrough
         - Does not produce results as good as average but both have same problems with differentiating foreground from background.
+        - Have tried adding a manipulation factor, better results are achieved when threshold is increased by a factor of 0.1 * x, however this is still not good enough as it does not bring enough foreground yet still too much background. Same goes for the addition factor of 8 and 10.
         
     3.x Laplacian Binarization Algorithm
         -

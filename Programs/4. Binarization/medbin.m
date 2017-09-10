@@ -1,4 +1,4 @@
-function bin_med = medbin( image )
+function bin_med = medbin(image, factor)
 %Binarize image globally using the average pixel intensities of the image 
 
     image_1d = reshape(image', 1, (size(image, 1) * size(image, 2)));
@@ -10,7 +10,7 @@ function bin_med = medbin( image )
     
     for i = 1 : size(image, 1)
         for ii = 1 : size(image, 2)
-            if image(i, ii) < med(2)
+            if image(i, ii) + factor < med(2)
                 bin_med(i, ii) = 0;
             else
                 bin_med(i, ii) = 1;
