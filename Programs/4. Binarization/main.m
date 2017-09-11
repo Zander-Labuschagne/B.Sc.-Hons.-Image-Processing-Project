@@ -6,12 +6,9 @@ close all;
 clear all;
 
 %% -------------------------Image Preperation------------------------- %%
-image = imread('PTDC0121.JPG');
-image = imresize(image, 0.2);
+image = imread('PTDC0012.JPG');
+image = imresize(image, 0.1);
 image_gray = rgb2gray(image);
-figure('Name', 'Original', 'NumberTitle', 'off');
-imagesc(image_gray);
-colormap('gray');
 
 
 
@@ -200,11 +197,8 @@ colormap('gray');
 
     %% --------------------------Gatos---------------------------%%
          cprintf('Black', '    Gatos binarization started...\n');
-         bin_gatos = uint8(gatos(image_gray, 3, 11));
-         figure('Name', 'Background', 'NumberTitle', 'off');
-         imagesc(bin_gatos);
-         colormap('gray');
-         imwrite(uint8(bin_gatos), 'bin/gatos/original/backgrounds/12.bin_gatos.png');
+         bin_gatos = uint8(gatos(image_gray, 3, 3));
+         imwrite(uint8(bin_gatos), 'bin/gatos/original/1.bin_gatos.png');
          cprintf('Blue', '    Gatos binarization completed.\n');
         
  cprintf('Strings', '  Binarization completed.\n');

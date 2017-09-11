@@ -1,0 +1,26 @@
+function d = get_d(B, I, S)
+%Compute d for Gatos final binarization
+%   B = Estimated background image
+%   I = Grayscale source image Is applied with Wiener low pass filter
+%   S = Grayscale Wiener filtered image I binarized with Sauvola algorithm
+
+    q = 0.8; %as suggested by Gatos
+    
+    cprintf('UnterminatedStrings', '        Computing delta for Gatos final thresholding started...\n');
+    delta = getDelta(uint8(B), I, S);
+    cprintf('Green', '        Computation of delta for Gatos final thresholding finished.\n');
+
+    d = q * delta;%First try
+    
+    %If above does not work we try the below
+    cprintf('UnterminatedStrings', '        Computing b for Gatos final thresholding started...\n');
+    b = get_b(uint8(B), S);
+    cprintf('Green', '        Computation of b for Gatos final thresholding finished.\n');
+    
+    p1 = 
+    p2 = 
+    d = q * delta * ((1 - p2)/(1 + exp((-4 * B(x, y))/(b * ()) + ()/())) + ());
+
+
+end
+

@@ -1,4 +1,4 @@
-function B = gatos(Is, wiener_kernel_size, local_window_size)
+function T = gatos(Is, wiener_kernel_size, local_window_size)
 %Binarize image by using Gatos algorithm
 %   Is = Source grayscale image
 %   I = Grayscale source image Is applied with Wiener low pass filter
@@ -17,12 +17,15 @@ function B = gatos(Is, wiener_kernel_size, local_window_size)
     cprintf('Green', '      Sauvola binarization for Gatos binarization finished.\n');
 
     cprintf('UnterminatedStrings', '      Background surface estimation started...\n');
-    B = bSurfEst(S, I, 120, 120);%dx = 150, dy = 150, see bSurfEst.m
+    B = bSurfEst(S, I, 60, 60);%dx = 150, dy = 150, see bSurfEst.m
+    imwrite(uint8(B), 'bin/gatos/original/backgrounds/1.bin_gatos.png');
     cprintf('Green', '      Background surface estimation finished.\n');
     
+    
     cprintf('UnterminatedStrings', '      Gatos final thresholding started...\n');
-    T = gatos_T(uint8(B), I);
+    T = gatos_T(uint8(B), I, S);
     cprintf('Green', '      Gatos final thresholding finished.\n');
+   
     
 end
 

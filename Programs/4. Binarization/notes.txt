@@ -166,15 +166,16 @@
         
     3.4 Gatos & Pratikakis's Binarization Algorithm
         - Pre-processing:
-            - Wiener 3 window size
+            - Wiener 3 window size, 11 is better
             - Improvement
             - Self implemented is very slow.
         - Binarization
             - Sauvola
-            - Extrack and interpolate background
+            - Extract and interpolate background
             - Combine background and filtered image for binarization.
             - Sauvola is slow as is backround estimation.
-            - use 0.2 * image size for speed
+            - use 0.1 * image size for speed
+            - Gatos final thresholding extremely slow
         
     3.5 ISODATA
         - 
