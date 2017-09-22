@@ -147,22 +147,23 @@
             - Gaussian Low Pass Filter:
                 - 
             - Median Low Pass Filter:
-                - 
+                - Not much difference in pre and post processing median filter, but better than Wiener, less strict
             - Wiener Low Pass Filter:
-                - 
+                - Rather stick to plain, removes too mucg foreground.
+                - Kernel size 5:
+                    - Works well, but could be better and may remove too mach foreground, maybe stick to plain?
                 - Kernel size 7:
-                    - 
-                - Kernel size 11:
+                    - Works very well but may remove too much foreground.
                 - Kernel size 9:
-                    - 
+                    - Works best but check disconnectivities, no takes away too much background.
                 - Kernel size 11:
-                    - 
+                    - Removes to much foreground
                 - Kernel size 13:
                     - 
                 - Kernel size 17:
                     - 
         - Post-processing filters:
-            - 
+            - Wiener post processing does not work that well. Dont use
         
     3.4 Gatos & Pratikakis's Binarization Algorithm
         - Pre-processing:

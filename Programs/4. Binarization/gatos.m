@@ -18,13 +18,17 @@ function T = gatos(Is, wiener_kernel_size, local_window_size)
 
     cprintf('UnterminatedStrings', '      Background surface estimation started...\n');
     B = bSurfEst(S, I, 60, 60);%dx = 150, dy = 150, see bSurfEst.m
-    imwrite(uint8(B), 'bin/gatos/original/backgrounds/1.bin_gatos.png');
+    %imwrite(uint8(B), 'bin/gatos/0.065/backgrounds/2.bin_gatos.png');
     cprintf('Green', '      Background surface estimation finished.\n');
     
     
     cprintf('UnterminatedStrings', '      Gatos final thresholding started...\n');
     T = gatos_T(uint8(B), I, S);
     cprintf('Green', '      Gatos final thresholding finished.\n');
+    
+    cprintf('UnterminatedStrings', '      Gatos post-processing upsampling started...\n');
+    T = imresize(T, 2);
+    cprintf('Green', '      Gatos post-processing upsampling finished.\n');
    
     
 end
