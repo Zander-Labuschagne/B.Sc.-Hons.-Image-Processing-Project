@@ -1,8 +1,8 @@
-function image_niblack = niblack( image, local_window_size )
+function t = niblack( image, local_window_size )
 %function to binarize image by using Niblack's binarization algorithm
 
     k = -0.2;% as suggested by Khurshid et al.
-    k = -0.5;% as suggested by Zander.
+   % k = -0.5;% as suggested by Zander.
 
 %     ssum = 0;
 % 
@@ -49,11 +49,11 @@ function image_niblack = niblack( image, local_window_size )
             end;
             m = msum / (local_window_size .^ 2); 
             t = m + k * s;
-            if(image(i, ii) < t)
-                image_niblack(i, ii) = 0;
-            else
-                image_niblack(i, ii) = 255;
-            end;
+%             if(image(i, ii) < t)
+%                 image_niblack(i, ii) = 0;
+%             else
+%                 image_niblack(i, ii) = 255;
+%             end;
         end;
     end;
 end

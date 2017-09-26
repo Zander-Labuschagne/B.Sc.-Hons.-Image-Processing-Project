@@ -1,4 +1,4 @@
-function image_sauvola = sauvola(image, local_window_size)
+function t = sauvola(image, local_window_size)
 %UNTITLED5 Summary of this function goes here
 %   Detailed explanation goes here
     k = 0.5;
@@ -29,11 +29,11 @@ function image_sauvola = sauvola(image, local_window_size)
             m = mean2(local_window);
             t = m * (1 - k * (1 - S / R));
             
-            if(image(i, ii) < t)
-                image_sauvola(i, ii) = 0;
-            else
-                image_sauvola(i, ii) = 255;
-            end;
+%             if(image(i, ii) < t)
+%                 image_sauvola(i, ii) = 0;
+%             else
+%                 image_sauvola(i, ii) = 255;
+%             end;
         end;
     end;
 
