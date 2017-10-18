@@ -11,6 +11,9 @@
 *.cb
 *.cb2
 
+Projek Poster.ai
+Projek Poster.pdf
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
@@ -21,6 +24,7 @@
 
 ## Generated if empty string is given at "Please type another file name for output:"
 .pdf
+*.ai
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
