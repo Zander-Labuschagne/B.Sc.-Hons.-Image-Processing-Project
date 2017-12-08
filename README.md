@@ -1,2 +1,2 @@
 # B.Sc.-Hons.-Image-Processing-Project
-My Image Processing Project for the B.Sc.(Hons.) Computer Science &amp; Information Systems degree at the North-West University: Potchefstroom Campus
+My Image Processing Project for the B.Sc.(Hons.) Computer Science &amp; Information Systems degree at the North-West University: Potchefstroom Campus 2017. I have achieved a grade of 8-% for this project, my poster was also selected to be displayed on the wall at the computer science department from 2018, I was awarded joint 3rd prize by Airvantage for my final presentation.
